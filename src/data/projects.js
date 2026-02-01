@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 'coloring-compiler',
     name: 'Coloring Book Compiler',
-    category: 'apps',
+    category: 'factory',
     progress: 90,
     status: 'complete',
     statusLabel: 'Done ✓',
@@ -19,7 +19,7 @@ export const projects = [
   {
     id: 'illustrated-compiler',
     name: 'Illustrated Book Compiler',
-    category: 'apps',
+    category: 'factory',
     progress: 85,
     status: 'almost',
     statusLabel: '85%',
@@ -156,7 +156,7 @@ export const projects = [
   {
     id: 'ai-image-studio',
     name: 'AI Image Studio',
-    category: 'apps',
+    category: 'factory',
     progress: 85,
     status: 'almost',
     statusLabel: '85%',
@@ -214,6 +214,7 @@ export const projects = [
 export const categories = {
   business: { name: 'Business', emoji: '💼', color: 'emerald' },
   fishing: { name: 'Fishing', emoji: '🎣', color: 'blue' },
+  factory: { name: 'Content Factory', emoji: '🏭', color: 'orange' },
   apps: { name: 'Apps', emoji: '📱', color: 'purple' }
 }
 

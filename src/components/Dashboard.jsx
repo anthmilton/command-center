@@ -4,6 +4,7 @@ export default function Dashboard({ onSelectProject }) {
   const priorityProjects = projects.filter(p => p.progress >= 90 || p.status === 'complete')
   const businessProjects = projects.filter(p => p.category === 'business')
   const fishingProjects = projects.filter(p => p.category === 'fishing')
+  const factoryProjects = projects.filter(p => p.category === 'factory')
   const appProjects = projects.filter(p => p.category === 'apps')
 
   return (
@@ -34,6 +35,14 @@ export default function Dashboard({ onSelectProject }) {
           </div>
         </section>
       )}
+
+      {/* Content Factory - Full Width */}
+      <CategorySection 
+        title="🏭 Content Factory" 
+        projects={factoryProjects}
+        onSelectProject={onSelectProject}
+        wide
+      />
 
       {/* Projects by Category */}
       <div className="grid md:grid-cols-3 gap-6">
@@ -71,7 +80,29 @@ function StatCard({ label, value, icon }) {
   )
 }
 
-function CategorySection({ title, projects, onSelectProject }) {
+function CategorySection({ title, projects, onSelectProject, wide }) {
+  if (wide) {
+    return (
+      <section className="bg-white/5 rounded-xl p-4 border border-orange-500/30">
+        <h3 className="font-semibold mb-3 text-white">{title}</h3>
+        <div className="grid md:grid-cols-3 gap-3">
+          {projects.map(project => (
+            <div 
+              key={project.id}
+              onClick={() => onSelectProject(project)}
+              className="flex items-center justify-between p-3 rounded-lg bg-white/5 hover:bg-white/10 cursor-pointer transition-colors"
+            >
+              <div>
+                <span className="text-sm text-gray-200">{project.name}</span>
+                <p className="text-xs text-gray-500 mt-1 line-clamp-1">{project.description}</p>
+              </div>
+              <StatusBadge status={project.status} label={project.statusLabel} small />
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
   return (
     <section className="bg-white/5 rounded-xl p-4 border border-white/10">
       <h3 className="font-semibold mb-3 text-white">{title}</h3>
