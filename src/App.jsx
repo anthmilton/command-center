@@ -3,6 +3,8 @@ import Dashboard from './components/Dashboard'
 import ProjectDetail from './components/ProjectDetail'
 import IdeaInbox from './components/IdeaInbox'
 import DecisionLog from './components/DecisionLog'
+import KDPFactory from './components/KDPFactory'
+import SystemMonitor from './components/SystemMonitor'
 
 function App() {
   const [view, setView] = useState('dashboard')
@@ -25,23 +27,20 @@ function App() {
             🍺 Skippy's Command Center
           </h1>
           <nav className="flex gap-1">
-            <NavButton 
-              active={view === 'dashboard'} 
-              onClick={() => navigate('dashboard')}
-            >
+            <NavButton active={view === 'dashboard'} onClick={() => navigate('dashboard')}>
               📊 Dashboard
             </NavButton>
-            <NavButton 
-              active={view === 'ideas'} 
-              onClick={() => navigate('ideas')}
-            >
+            <NavButton active={view === 'factory'} onClick={() => navigate('factory')}>
+              🏭 Factory
+            </NavButton>
+            <NavButton active={view === 'ideas'} onClick={() => navigate('ideas')}>
               💡 Ideas
             </NavButton>
-            <NavButton 
-              active={view === 'decisions'} 
-              onClick={() => navigate('decisions')}
-            >
+            <NavButton active={view === 'decisions'} onClick={() => navigate('decisions')}>
               📋 Decisions
+            </NavButton>
+            <NavButton active={view === 'system'} onClick={() => navigate('system')}>
+              ⚙️ System
             </NavButton>
           </nav>
         </div>
@@ -49,17 +48,12 @@ function App() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-6">
-        {view === 'dashboard' && (
-          <Dashboard onSelectProject={(p) => navigate('project', p)} />
-        )}
-        {view === 'project' && selectedProject && (
-          <ProjectDetail 
-            project={selectedProject} 
-            onBack={() => navigate('dashboard')} 
-          />
-        )}
+        {view === 'dashboard' && <Dashboard onSelectProject={(p) => navigate('project', p)} />}
+        {view === 'project' && selectedProject && <ProjectDetail project={selectedProject} onBack={() => navigate('dashboard')} />}
         {view === 'ideas' && <IdeaInbox />}
         {view === 'decisions' && <DecisionLog />}
+        {view === 'factory' && <KDPFactory />}
+        {view === 'system' && <SystemMonitor />}
       </main>
 
       {/* Footer */}

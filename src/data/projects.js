@@ -40,7 +40,7 @@ export const projects = [
     category: 'business',
     progress: 100,
     status: 'complete',
-    statusLabel: 'Complete ✓',
+    statusLabel: 'Pricing Tuned ✓',
     description: 'Complete sign shop management system with pricing calculator, customers, estimates, work orders, invoices, and materials management.',
     blockers: [],
     nextActions: [
@@ -50,7 +50,7 @@ export const projects = [
       'User testing in real workflow'
     ],
     techStack: ['React', 'Express', 'PostgreSQL', 'Prisma'],
-    lastWorked: '2025-01-31',
+    lastWorked: '2026-02-01',
     file: 'signswift.md'
   },
   {
@@ -159,9 +159,9 @@ export const projects = [
     category: 'factory',
     progress: 85,
     status: 'almost',
-    statusLabel: '85%',
+    statusLabel: 'Secured 🔒',
     description: 'Full AI image generation platform with multi-provider support (Gemini, OpenAI, Stability), KDP book cover system, drag-and-drop text overlay editor, and batch production studio.',
-    blockers: ['Could use documentation/onboarding', 'API key management UX'],
+    blockers: ['Could use documentation/onboarding'],
     nextActions: [
       'Clean up versioned files (consolidate to single version)',
       'Add user documentation / tutorial',
@@ -169,7 +169,7 @@ export const projects = [
       'Marketing / product positioning'
     ],
     techStack: ['Python', 'CustomTkinter', 'PIL/Pillow', 'Google Gemini API', 'OpenAI API', 'Stability AI API', 'PyInstaller'],
-    lastWorked: '2025-02-01',
+    lastWorked: '2026-02-01',
     file: 'ai-image-studio.md'
   },
   {
