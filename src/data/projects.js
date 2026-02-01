@@ -119,22 +119,23 @@ export const projects = [
     file: 'time-tracking-app.md'
   },
   {
-    id: 'content-editor',
-    name: 'Content Editor',
+    id: 'ai-image-studio',
+    name: 'AI Image Studio',
     category: 'apps',
-    progress: 10,
-    status: 'idea',
-    statusLabel: 'Early',
-    description: 'Unique concept for content creators posting online.',
-    blockers: ['Need to document the core concept'],
+    progress: 85,
+    status: 'almost',
+    statusLabel: '85%',
+    description: 'Full AI image generation platform with multi-provider support (Gemini, OpenAI, Stability), KDP book cover system, drag-and-drop text overlay editor, and batch production studio.',
+    blockers: ['Could use documentation/onboarding', 'API key management UX'],
     nextActions: [
-      'Write up the unique concept',
-      'Identify target users',
-      'Sketch out core features'
+      'Clean up versioned files (consolidate to single version)',
+      'Add user documentation / tutorial',
+      'Consider web version for broader access',
+      'Marketing / product positioning'
     ],
-    techStack: ['TBD'],
-    lastWorked: null,
-    file: 'content-editing-app.md'
+    techStack: ['Python', 'CustomTkinter', 'PIL/Pillow', 'Google Gemini API', 'OpenAI API', 'Stability AI API', 'PyInstaller'],
+    lastWorked: '2025-02-01',
+    file: 'ai-image-studio.md'
   },
   {
     id: 'mural-expansion',
