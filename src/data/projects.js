@@ -141,18 +141,19 @@ export const projects = [
     id: 'mural-expansion',
     name: 'Mural Expansion',
     category: 'business',
-    progress: 5,
+    progress: 15,
     status: 'planning',
     statusLabel: 'Planning',
-    description: 'Expand mural printing capabilities using the HP Latex 700.',
-    blockers: ['Define target market', 'Pricing strategy'],
+    description: 'AI-generated custom murals on HP Latex 700. Same-day turnaround, no licensing fees. Connects AI Image Studio to print infrastructure.',
+    blockers: ['Define target market', 'Pricing strategy', 'Need sample portfolio'],
     nextActions: [
-      'Research mural market in the area',
-      'Define service offerings',
-      'Create portfolio/samples'
+      'Create mural presets in AI Image Studio',
+      'Generate sample portfolio (10-20 designs)',
+      'Define service tiers and pricing',
+      'Marketing: website + social'
     ],
-    techStack: [],
-    lastWorked: null,
+    techStack: ['AI Image Studio', 'HP Latex 700'],
+    lastWorked: '2025-02-01',
     file: 'mural-expansion.md'
   },
   {
