@@ -1,5 +1,40 @@
 export const projects = [
   {
+    id: 'coloring-compiler',
+    name: 'Coloring Book Compiler',
+    category: 'apps',
+    progress: 90,
+    status: 'complete',
+    statusLabel: 'Done ✓',
+    description: 'Turns AI-generated coloring pages into KDP-ready PDFs. Captions, page numbers, covers, multiple formats. Production tool.',
+    blockers: [],
+    nextActions: [
+      'Consolidate versioned files',
+      'Clean up repo structure'
+    ],
+    techStack: ['Python', 'Pillow', 'ReportLab', 'CustomTkinter'],
+    lastWorked: '2025-02-01',
+    file: 'coloring-book-compiler.md'
+  },
+  {
+    id: 'illustrated-compiler',
+    name: 'Illustrated Book Compiler',
+    category: 'apps',
+    progress: 85,
+    status: 'almost',
+    statusLabel: '85%',
+    description: 'Compiles illustrated public domain books for KDP. Built for Carmilla, adaptable for other classics. Text triggers + image placement.',
+    blockers: ['Currently hardcoded for Carmilla'],
+    nextActions: [
+      'Generalize for other books',
+      'Clean up test files',
+      'Document how to add new books'
+    ],
+    techStack: ['Python', 'Pillow', 'ReportLab', 'CustomTkinter'],
+    lastWorked: '2025-02-01',
+    file: 'illustrated-book-compiler.md'
+  },
+  {
     id: 'signswift',
     name: 'Sign Shop OS',
     category: 'business',
