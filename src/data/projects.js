@@ -195,19 +195,41 @@ export const projects = [
     id: 'kdp-books',
     name: 'KDP Books',
     category: 'business',
-    progress: 50,
+    progress: 65,
     status: 'live',
-    statusLabel: 'Live',
-    description: 'AI-generated coloring books & illustrated public domain books on Amazon KDP.',
-    blockers: ['Marketing/visibility - no sales yet'],
+    statusLabel: 'Active Launch',
+    description: 'AI-generated coloring books & illustrated public domain books on Amazon KDP. 17 books total: 11 live, 6 pending approval (memory care trilogy + fishing trilogy).',
+    blockers: ['Need ASINs for new books to complete Pinterest linking'],
     nextActions: [
-      'Review current listings',
-      'Research successful KDP books',
-      'Consider Amazon ads'
+      'Wait for approval on 6 new books (memory care + fishing)',
+      'Complete Pinterest pin uploads (27 pins ready)',
+      'Monitor first week performance',
+      'Set up Etsy digital downloads',
+      'Create landing page (Carrd.co)'
     ],
-    techStack: ['AI image generation', 'KDP'],
-    lastWorked: null,
+    techStack: ['AI Image Studio', 'KDP', 'Pinterest', 'Canva'],
+    lastWorked: '2026-02-03',
     file: 'kdp-books.md'
+  },
+  {
+    id: 'pinterest-automation',
+    name: 'Pinterest Pin Automation',
+    category: 'factory',
+    progress: 5,
+    status: 'idea',
+    statusLabel: 'Planned',
+    description: 'Automate Pinterest pin creation and posting through AI Image Studio. Generate 3-5 pins per book automatically instead of manual Canva work. Templates: cover shot, interior sample, problem/solution.',
+    blockers: ['Need to complete manual phase first (learn what works)', 'Template design needed'],
+    nextActions: [
+      'Finish manual Pinterest campaign (validate pin styles)',
+      'Design pin templates for automation',
+      'Build pinterest_pin_generator.py module',
+      'Integrate with AI Image Studio',
+      'Optional: Pinterest API for auto-posting'
+    ],
+    techStack: ['Python', 'Pillow', 'AI Image Studio', 'Pinterest API (optional)'],
+    lastWorked: '2026-02-03',
+    file: 'pinterest-automation-idea.md'
   }
 ]
 
