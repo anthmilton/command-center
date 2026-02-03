@@ -195,17 +195,18 @@ export const projects = [
     id: 'kdp-books',
     name: 'KDP Books',
     category: 'business',
-    progress: 65,
+    progress: 70,
     status: 'live',
     statusLabel: 'Active Launch',
-    description: 'AI-generated coloring books & illustrated public domain books on Amazon KDP. 17 books total: 11 live, 6 pending approval (memory care trilogy + fishing trilogy).',
+    description: 'AI-generated coloring books & illustrated public domain books on Amazon KDP. 17 books total: 11 live, 6 pending approval (memory care trilogy + fishing trilogy). Pinterest account active (Blackwood Illustrated).',
     blockers: ['Need ASINs for new books to complete Pinterest linking'],
     nextActions: [
       'Wait for approval on 6 new books (memory care + fishing)',
-      'Complete Pinterest pin uploads (27 pins ready)',
+      'Upload Pinterest pins (27 ready, 5 per day)',
+      'Deploy landing pages once ready',
+      'Link landing pages to Pinterest pins',
       'Monitor first week performance',
-      'Set up Etsy digital downloads',
-      'Create landing page (Carrd.co)'
+      'Set up Etsy digital downloads'
     ],
     techStack: ['AI Image Studio', 'KDP', 'Pinterest', 'Canva'],
     lastWorked: '2026-02-03',
@@ -230,6 +231,27 @@ export const projects = [
     techStack: ['Python', 'Pillow', 'AI Image Studio', 'Pinterest API (optional)'],
     lastWorked: '2026-02-03',
     file: 'pinterest-automation-idea.md'
+  },
+  {
+    id: 'landing-pages',
+    name: 'Landing Page System',
+    category: 'business',
+    progress: 30,
+    status: 'wip',
+    statusLabel: 'Building',
+    description: 'Multi-page landing system for Blackwood Illustrated. Hub page + 3 niche-specific pages (Memory Care, Gothic, Kawaii) for targeted Pinterest traffic conversion. Brand identity package included.',
+    blockers: [],
+    nextActions: [
+      'Generate brand identity (logo, colors, fonts) with Gemini',
+      'Generate 4 landing pages with Gemini (hub + 3 niche)',
+      'Insert brand elements into pages',
+      'Add book covers and Amazon links',
+      'Deploy to hosting (Vercel/Netlify)',
+      'Link from Pinterest pins'
+    ],
+    techStack: ['HTML', 'CSS', 'Gemini AI (generation)', 'Vercel/Netlify (hosting)'],
+    lastWorked: '2026-02-03',
+    file: 'landing-pages.md'
   }
 ]
 
