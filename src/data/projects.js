@@ -198,18 +198,19 @@ export const projects = [
     progress: 70,
     status: 'live',
     statusLabel: 'Active Launch',
-    description: 'AI-generated coloring books & illustrated public domain books on Amazon KDP. 17 books total: 11 live, 6 pending approval (memory care trilogy + fishing trilogy). Pinterest account active (Blackwood Illustrated).',
-    blockers: ['Need ASINs for new books to complete Pinterest linking'],
+    description: 'AI-generated coloring books & illustrated public domain books on Amazon KDP. 17+ books total. Pinterest account active (Blackwood Illustrated). Landing pages built and awaiting book catalog data.',
+    blockers: ['Need complete book catalog extraction from KDP (manual list compilation in progress)'],
     nextActions: [
-      'Wait for approval on 6 new books (memory care + fishing)',
-      'Upload Pinterest pins (27 ready, 5 per day)',
-      'Deploy landing pages once ready',
+      'Compile master book list: Title, ASIN, Format(s), Genre',
+      'Populate landing pages books.json with real data',
+      'Update UPDATE_AMAZON_LINKS.md with ASINs',
+      'Deploy landing pages',
+      'Continue Pinterest pin uploads (5 per day)',
       'Link landing pages to Pinterest pins',
-      'Monitor first week performance',
-      'Set up Etsy digital downloads'
+      'Monitor first week performance'
     ],
-    techStack: ['AI Image Studio', 'KDP', 'Pinterest', 'Canva'],
-    lastWorked: '2026-02-03',
+    techStack: ['AI Image Studio', 'KDP', 'Pinterest', 'Canva', 'Landing Pages'],
+    lastWorked: '2026-02-04',
     file: 'kdp-books.md'
   },
   {
@@ -233,24 +234,43 @@ export const projects = [
     file: 'pinterest-automation-idea.md'
   },
   {
+    id: 'api-cost-tracker',
+    name: 'API Cost Tracker',
+    category: 'apps',
+    progress: 0,
+    status: 'idea',
+    statusLabel: 'Concept',
+    description: 'Unified dashboard to track API usage and costs across all services (Gemini, OpenAI, Stability AI, OpenClaw, etc.). Token usage = money usage. See total monthly spend, project costs, and ROI at a glance.',
+    blockers: ['Need to research existing solutions first', 'Define MVP feature set'],
+    nextActions: [
+      'Research existing API cost tracking tools',
+      'Define MVP features (which APIs to support first)',
+      'Document API integration requirements',
+      'Decide: web app, mobile, or both?',
+      'Security plan for handling API keys'
+    ],
+    techStack: ['TBD - likely web-based dashboard'],
+    lastWorked: '2026-02-04',
+    file: 'api-cost-tracker.md'
+  },
+  {
     id: 'landing-pages',
     name: 'Landing Page System',
     category: 'business',
-    progress: 30,
-    status: 'wip',
-    statusLabel: 'Building',
-    description: 'Multi-page landing system for Blackwood Illustrated. Hub page + 3 niche-specific pages (Memory Care, Gothic, Kawaii) for targeted Pinterest traffic conversion. Brand identity package included.',
-    blockers: [],
+    progress: 90,
+    status: 'almost',
+    statusLabel: 'Pages Built ✓',
+    description: 'Multi-page landing system for Blackwood Illustrated. Hub page + 4 niche-specific pages (Bass Fishing, Memory Care, Gothic, Kawaii) for targeted Pinterest traffic conversion. All pages built, Groundwood recycled paper banner integrated, mobile-responsive.',
+    blockers: ['Need book catalog with real ASINs to populate Amazon links'],
     nextActions: [
-      'Generate brand identity (logo, colors, fonts) with Gemini',
-      'Generate 4 landing pages with Gemini (hub + 3 niche)',
-      'Insert brand elements into pages',
-      'Add book covers and Amazon links',
+      'Compile master book catalog from KDP',
+      'Update books.json with real ASINs',
+      'Replace placeholder Amazon links',
       'Deploy to hosting (Vercel/Netlify)',
       'Link from Pinterest pins'
     ],
-    techStack: ['HTML', 'CSS', 'Gemini AI (generation)', 'Vercel/Netlify (hosting)'],
-    lastWorked: '2026-02-03',
+    techStack: ['HTML', 'CSS', 'JavaScript', 'Groundwood Paper Banner', 'Vercel/Netlify (hosting)'],
+    lastWorked: '2026-02-04',
     file: 'landing-pages.md'
   }
 ]

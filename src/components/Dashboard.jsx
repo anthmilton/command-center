@@ -1,11 +1,23 @@
+import { useState } from 'react'
 import { projects, categories, statusColors } from '../data/projects'
+import { priorities, completePriority } from '../data/priorities'
 
 export default function Dashboard({ onSelectProject }) {
+  const [todaysTasks, setTodaysTasks] = useState(priorities.tasks)
+  
   const priorityProjects = projects.filter(p => p.progress >= 90 || p.status === 'complete')
   const businessProjects = projects.filter(p => p.category === 'business')
   const fishingProjects = projects.filter(p => p.category === 'fishing')
   const factoryProjects = projects.filter(p => p.category === 'factory')
   const appProjects = projects.filter(p => p.category === 'apps')
+
+  const toggleTask = (taskId) => {
+    setTodaysTasks(tasks => 
+      tasks.map(task => 
+        task.id === taskId ? { ...task, completed: !task.completed } : task
+      )
+    )
+  }
 
   return (
     <div className="space-y-6">
@@ -16,6 +28,15 @@ export default function Dashboard({ onSelectProject }) {
         <StatCard label="Complete" value={projects.filter(p => p.status === 'complete').length} icon="✅" />
         <StatCard label="Ideas" value={projects.filter(p => p.status === 'idea').length} icon="💡" />
       </div>
+
+      {/* Today's Priorities */}
+      <TodaysPriorities 
+        date={priorities.date}
+        tasks={todaysTasks}
+        weather={priorities.weather}
+        reminders={priorities.reminders}
+        onToggleTask={toggleTask}
+      />
 
       {/* Priority Section */}
       {priorityProjects.length > 0 && (
@@ -178,6 +199,125 @@ function ProgressBar({ progress }) {
         className="h-full bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full transition-all"
         style={{ width: `${progress}%` }}
       />
+    </div>
+  )
+}
+
+function TodaysPriorities({ date, tasks, weather, reminders, onToggleTask }) {
+  const highPriority = tasks.filter(t => t.priority === 'high')
+  const mediumPriority = tasks.filter(t => t.priority === 'medium')
+  const completed = tasks.filter(t => t.completed).length
+  const total = tasks.length
+
+  return (
+    <section className="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 rounded-xl p-5 border border-yellow-500/30">
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-lg font-semibold flex items-center gap-2 text-white">
+          <span>☀️</span> Today's Priorities
+          <span className="text-sm text-gray-400 font-normal ml-2">
+            {new Date(date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+          </span>
+        </h2>
+        <div className="text-sm text-gray-400">
+          {completed}/{total} completed
+        </div>
+      </div>
+
+      {/* Weather & Brief Status */}
+      <div className="grid md:grid-cols-2 gap-3 mb-4">
+        <div className="bg-white/5 rounded-lg p-3 border border-white/10">
+          <p className="text-xs text-gray-400 mb-1">Weather</p>
+          <p className="text-sm text-white">{weather.location}: {weather.summary}</p>
+        </div>
+        <div className="bg-white/5 rounded-lg p-3 border border-white/10">
+          <p className="text-xs text-gray-400 mb-1">Morning Brief</p>
+          <p className="text-sm text-emerald-400">8:00 AM AST ✓</p>
+        </div>
+      </div>
+
+      {/* Tasks */}
+      <div className="space-y-3">
+        {highPriority.length > 0 && (
+          <TaskGroup 
+            title="High Priority" 
+            tasks={highPriority}
+            color="red"
+            onToggle={onToggleTask}
+          />
+        )}
+        {mediumPriority.length > 0 && (
+          <TaskGroup 
+            title="Medium Priority" 
+            tasks={mediumPriority}
+            color="yellow"
+            onToggle={onToggleTask}
+          />
+        )}
+      </div>
+
+      {/* Reminders */}
+      {reminders.length > 0 && (
+        <div className="mt-4 pt-4 border-t border-white/10">
+          <p className="text-xs text-gray-400 mb-2">📌 Reminders</p>
+          <ul className="space-y-1">
+            {reminders.map((reminder, idx) => (
+              <li key={idx} className="text-sm text-gray-300 flex items-start gap-2">
+                <span className="text-gray-500">•</span>
+                <span>{reminder}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </section>
+  )
+}
+
+function TaskGroup({ title, tasks, color, onToggle }) {
+  const colors = {
+    red: 'border-red-500/30 bg-red-500/5',
+    yellow: 'border-yellow-500/30 bg-yellow-500/5',
+    blue: 'border-blue-500/30 bg-blue-500/5'
+  }
+
+  return (
+    <div className={`rounded-lg border p-3 ${colors[color]}`}>
+      <p className="text-xs font-semibold text-gray-400 mb-2">{title}</p>
+      <div className="space-y-2">
+        {tasks.map(task => (
+          <TaskItem key={task.id} task={task} onToggle={onToggle} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function TaskItem({ task, onToggle }) {
+  return (
+    <div 
+      className="flex items-start gap-3 p-2 rounded hover:bg-white/5 cursor-pointer transition-colors"
+      onClick={() => onToggle(task.id)}
+    >
+      <input 
+        type="checkbox" 
+        checked={task.completed}
+        onChange={() => {}}
+        className="mt-0.5 w-4 h-4 rounded border-gray-600 bg-white/10 checked:bg-emerald-500 cursor-pointer"
+      />
+      <div className="flex-1">
+        <p className={`text-sm ${task.completed ? 'line-through text-gray-500' : 'text-gray-200'}`}>
+          {task.text}
+        </p>
+        <div className="flex items-center gap-2 mt-1">
+          <span className="text-xs text-gray-500">{task.owner}</span>
+          {task.project && (
+            <span className="text-xs text-gray-600">• {task.project}</span>
+          )}
+          {task.blockedBy && (
+            <span className="text-xs text-orange-500">⚠️ blocked</span>
+          )}
+        </div>
+      </div>
     </div>
   )
 }

@@ -1,11 +1,11 @@
 export const factoryData = {
-  lastUpdated: "2026-02-01T19:35:33.037Z",
+  lastUpdated: "2026-02-04T04:49:00.000Z",
   cron: [
   {
     "id": "cc6ceeb3-39e2-445d-b3c7-41d9d7a186e3",
     "name": "Daily Morning Brief",
-    "schedule": "30 14 * * * (UTC)",
-    "nextRun": "10:30 AM Atlantic",
+    "schedule": "0 12 * * * (UTC)",
+    "nextRun": "8:00 AM Atlantic",
     "enabled": true
   }
 ],
