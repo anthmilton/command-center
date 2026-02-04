@@ -254,6 +254,50 @@ export const projects = [
     file: 'api-cost-tracker.md'
   },
   {
+    id: 'led-rebate-program',
+    name: 'LED Sign Conversion Rebate Service',
+    category: 'business',
+    progress: 5,
+    status: 'planning',
+    statusLabel: 'Planning',
+    description: 'Sign shop service offering: LED conversions + rebate assistance. NB Power provides 25% back on LED sign upgrades ($250k cap), Renewable NB offers up to $100k for retrofits, plus federal stackable incentives. Handle pre-approval and paperwork for clients.',
+    blockers: [],
+    nextActions: [
+      'Register business with NB Power Business Rebate Program',
+      'Request FREE energy walk-through for shop (test process)',
+      'Convert shop\'s own signs first (case study + 25% back)',
+      'Document rebate process and requirements',
+      'Create service package offerings and pricing',
+      'Contact NB Power with sign-specific questions',
+      'Build client outreach campaign (existing fluorescent signs)',
+      'Design marketing materials highlighting 25% savings'
+    ],
+    techStack: ['NB Power Business Rebate Program', 'Renewable NB', 'NRCan Federal Incentives'],
+    lastWorked: '2026-02-04',
+    file: 'led-conversion-rebates-canada.md'
+  },
+  {
+    id: 'ai-for-an-old-guy',
+    name: 'AI for an Old Guy - YouTube Channel',
+    category: 'business',
+    progress: 0,
+    status: 'idea',
+    statusLabel: 'Validating',
+    description: 'YouTube channel calling BS on "AI is easy" narrative. Honest content about difficulty, pitfalls, real costs, and basics nobody explains. Target: non-technical 40+ business owners learning AI. "I\'m figuring this shit out too - here\'s what I learned the hard way."',
+    blockers: ['Research if someone is already doing this approach', 'Never done YouTube before', 'Uncertain if right person for this'],
+    nextActions: [
+      'Research YouTube for similar honest/difficult AI content',
+      'Validate market gap exists',
+      'If gap exists: record ONE test video (10-15 min, no polish)',
+      'Show test video to 3-5 non-technical friends',
+      'Decide: worth pursuing or not?',
+      'If yes: pilot episode ideas and production setup'
+    ],
+    techStack: ['YouTube', 'Screen recording (OBS)', 'Basic editing (DaVinci Resolve)', 'Phone camera/mic'],
+    lastWorked: '2026-02-04',
+    file: 'ai-for-an-old-guy-youtube.md'
+  },
+  {
     id: 'landing-pages',
     name: 'Landing Page System',
     category: 'business',
