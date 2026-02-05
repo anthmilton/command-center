@@ -2,15 +2,16 @@
 // This file is dynamically managed by the Command Center
 
 export const priorities = {
-  date: "2026-02-04",
-  briefDelivered: false,
+  date: "2026-02-05",
+  briefDelivered: true,
   tasks: [
     {
       id: "book-catalog",
       text: "Compile KDP book catalog (Title, ASIN, Format, Genre)",
       owner: "Anth",
       priority: "high",
-      completed: false,
+      completed: true,
+      completedAt: "2026-02-05T03:30:00Z",
       project: "kdp-books"
     },
     {
@@ -18,7 +19,8 @@ export const priorities = {
       text: "Add Today's Priorities card to Command Center Dashboard",
       owner: "Skippy",
       priority: "high",
-      completed: false,
+      completed: true,
+      completedAt: "2026-02-04T14:30:00Z",
       project: "command-center"
     },
     {
@@ -26,19 +28,20 @@ export const priorities = {
       text: "Populate books.json and deploy landing pages",
       owner: "Together",
       priority: "medium",
-      completed: false,
+      completed: true,
+      completedAt: "2026-02-05T03:15:00Z",
       project: "landing-pages",
-      blockedBy: "book-catalog"
+      blockedBy: null
     }
   ],
   weather: {
     location: "St. John, NB",
-    summary: "Pending daily brief"
+    summary: "Winter indoor project mode ❄️"
   },
   reminders: [
-    "Daily brief now arrives at 8:00 AM AST (moved from 10:30 AM)",
-    "Landing pages complete - just need book data",
-    "Pinterest pins uploading 5/day automatically"
+    "Landing pages are LIVE at landing-pages-eight-sable.vercel.app",
+    "Review visual tweaks needed for landing pages",
+    "Morning brief set for 8:00 AM AST"
   ]
 }
 
