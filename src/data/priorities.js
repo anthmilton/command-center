@@ -6,42 +6,39 @@ export const priorities = {
   briefDelivered: true,
   tasks: [
     {
-      id: "book-catalog",
-      text: "Compile KDP book catalog (Title, ASIN, Format, Genre)",
+      id: "get-new-asins",
+      text: "Provide ASINs for newly approved books (Saltwater, Sunday Drive, etc.)",
       owner: "Anth",
       priority: "high",
-      completed: true,
-      completedAt: "2026-02-05T03:30:00Z",
+      completed: false,
       project: "kdp-books"
     },
     {
-      id: "command-center-priorities",
-      text: "Add Today's Priorities card to Command Center Dashboard",
+      id: "update-landing-links",
+      text: "Update landing pages with new live Amazon links",
       owner: "Skippy",
       priority: "high",
-      completed: true,
-      completedAt: "2026-02-04T14:30:00Z",
-      project: "command-center"
+      completed: false,
+      project: "landing-pages",
+      blockedBy: "get-new-asins"
     },
     {
-      id: "landing-pages-deploy",
-      text: "Populate books.json and deploy landing pages",
-      owner: "Together",
+      id: "led-rebate-reg",
+      text: "Register for NB Power Business Rebate Program",
+      owner: "Anth",
       priority: "medium",
-      completed: true,
-      completedAt: "2026-02-05T03:15:00Z",
-      project: "landing-pages",
-      blockedBy: null
+      completed: false,
+      project: "led-rebate-program"
     }
   ],
   weather: {
     location: "St. John, NB",
-    summary: "Winter indoor project mode ❄️"
+    summary: "Cloudy, -2°C (Feels like -8°C) ❄️"
   },
   reminders: [
-    "Landing pages are LIVE at landing-pages-eight-sable.vercel.app",
-    "Review visual tweaks needed for landing pages",
-    "Morning brief set for 8:00 AM AST"
+    "ALL KDP books are now approved! 🚀",
+    "Landing pages ready for final link update",
+    "Pinterest automation research confirmed (OAuth flow)"
   ]
 }
 
