@@ -195,22 +195,18 @@ export const projects = [
     id: 'kdp-books',
     name: 'KDP Books',
     category: 'business',
-    progress: 70,
+    progress: 75,
     status: 'live',
-    statusLabel: 'Active Launch',
-    description: 'AI-generated coloring books & illustrated public domain books on Amazon KDP. 17+ books total. Pinterest account active (Blackwood Illustrated). Landing pages built and awaiting book catalog data.',
-    blockers: ['Need complete book catalog extraction from KDP (manual list compilation in progress)'],
+    statusLabel: 'Catalog Updated',
+    description: 'AI-generated coloring books. Catalog extracted and ASINs linked. 14 books tracked.',
+    blockers: [],
     nextActions: [
-      'Compile master book list: Title, ASIN, Format(s), Genre',
-      'Populate landing pages books.json with real data',
-      'Update UPDATE_AMAZON_LINKS.md with ASINs',
-      'Deploy landing pages',
-      'Continue Pinterest pin uploads (5 per day)',
-      'Link landing pages to Pinterest pins',
-      'Monitor first week performance'
+      'Monitor "In Review" books for approval',
+      'Update links when new books go live',
+      'Continue Pinterest pins'
     ],
-    techStack: ['AI Image Studio', 'KDP', 'Pinterest', 'Canva', 'Landing Pages'],
-    lastWorked: '2026-02-04',
+    techStack: ['AI Image Studio', 'KDP', 'Pinterest'],
+    lastWorked: '2026-02-05',
     file: 'kdp-books.md'
   },
   {
@@ -301,20 +297,18 @@ export const projects = [
     id: 'landing-pages',
     name: 'Landing Page System',
     category: 'business',
-    progress: 90,
-    status: 'almost',
-    statusLabel: 'Pages Built ✓',
-    description: 'Multi-page landing system for Blackwood Illustrated. Hub page + 4 niche-specific pages (Bass Fishing, Memory Care, Gothic, Kawaii) for targeted Pinterest traffic conversion. All pages built, Groundwood recycled paper banner integrated, mobile-responsive.',
-    blockers: ['Need book catalog with real ASINs to populate Amazon links'],
+    progress: 95,
+    status: 'live',
+    statusLabel: 'Live / Tweaking',
+    description: 'Multi-page landing system for Blackwood Illustrated. Hub page + 4 niche-specific pages. Live on Vercel. Bass page added.',
+    blockers: [],
     nextActions: [
-      'Compile master book catalog from KDP',
-      'Update books.json with real ASINs',
-      'Replace placeholder Amazon links',
-      'Deploy to hosting (Vercel/Netlify)',
-      'Link from Pinterest pins'
+      'Visual tweaks (images, links)',
+      'Monitor traffic',
+      'Link from Pinterest'
     ],
-    techStack: ['HTML', 'CSS', 'JavaScript', 'Groundwood Paper Banner', 'Vercel/Netlify (hosting)'],
-    lastWorked: '2026-02-04',
+    techStack: ['HTML', 'CSS', 'JavaScript', 'Groundwood Paper Banner', 'Vercel'],
+    lastWorked: '2026-02-05',
     file: 'landing-pages.md'
   }
 ]
