@@ -195,18 +195,18 @@ export const projects = [
     id: 'kdp-books',
     name: 'KDP Books',
     category: 'business',
-    progress: 75,
+    progress: 100,
     status: 'live',
-    statusLabel: 'Catalog Updated',
-    description: 'AI-generated coloring books. Catalog extracted and ASINs linked. 14 books tracked.',
+    statusLabel: '100% Live',
+    description: 'AI-generated coloring books. All 18 books now APPROVED and LIVE on Amazon. Catalog fully linked on landing pages.',
     blockers: [],
     nextActions: [
-      'Monitor "In Review" books for approval',
-      'Update links when new books go live',
-      'Continue Pinterest pins'
+      'Monitor sales performance',
+      'Continue Pinterest pins',
+      'Brainstorm "Life\'s Work" trade-skill series'
     ],
     techStack: ['AI Image Studio', 'KDP', 'Pinterest'],
-    lastWorked: '2026-02-05',
+    lastWorked: '2026-02-08',
     file: 'kdp-books.md'
   },
   {
@@ -273,6 +273,24 @@ export const projects = [
     file: 'led-conversion-rebates-canada.md'
   },
   {
+    id: 'memory-sensory-boards',
+    name: 'Memory Bridge Sensory Boards',
+    category: 'business',
+    progress: 0,
+    status: 'idea',
+    statusLabel: 'Shelved',
+    description: 'Therapeutic "Busy Boards" for dementia/autism. Validated market with high margins ($50-150). Fits Memory Care brand perfectly. Shelved until books gain traction.',
+    blockers: ['Shelved pending book traction', 'Manufacturing logistics'],
+    nextActions: [
+      'Wait for Memory Care book sales data',
+      'Research manufacturing (CNC/3D Print)',
+      'Design prototype "Memory Bridge" board'
+    ],
+    techStack: ['Woodworking', 'Hardware', 'Etsy'],
+    lastWorked: '2026-02-07',
+    file: null
+  },
+  {
     id: 'ai-for-an-old-guy',
     name: 'AI for an Old Guy - YouTube Channel',
     category: 'business',
@@ -297,18 +315,17 @@ export const projects = [
     id: 'landing-pages',
     name: 'Landing Page System',
     category: 'business',
-    progress: 95,
+    progress: 100,
     status: 'live',
-    statusLabel: 'Live / Tweaking',
+    statusLabel: '100% Live',
     description: 'Multi-page landing system for Blackwood Illustrated. Hub page + 4 niche-specific pages. Live on Vercel. Bass page added.',
     blockers: [],
     nextActions: [
-      'Visual tweaks (images, links)',
-      'Monitor traffic',
-      'Link from Pinterest'
+      'Monitor traffic from Pinterest',
+      'Visual tweaks as needed'
     ],
     techStack: ['HTML', 'CSS', 'JavaScript', 'Groundwood Paper Banner', 'Vercel'],
-    lastWorked: '2026-02-05',
+    lastWorked: '2026-02-08',
     file: 'landing-pages.md'
   }
 ]
