@@ -2,43 +2,42 @@
 // This file is dynamically managed by the Command Center
 
 export const priorities = {
-  date: "2026-02-05",
+  date: "2026-02-08",
   briefDelivered: true,
   tasks: [
     {
-      id: "get-new-asins",
-      text: "Provide ASINs for newly approved books (Saltwater, Sunday Drive, etc.)",
+      id: "life-work-concept",
+      text: "Brainstorm 'Life's Work' coloring book series (Trades/Professions)",
       owner: "Anth",
       priority: "high",
       completed: false,
       project: "kdp-books"
     },
     {
-      id: "update-landing-links",
-      text: "Update landing pages with new live Amazon links",
-      owner: "Skippy",
-      priority: "high",
-      completed: false,
-      project: "landing-pages",
-      blockedBy: "get-new-asins"
-    },
-    {
-      id: "led-rebate-reg",
-      text: "Register for NB Power Business Rebate Program",
+      id: "monitor-sales",
+      text: "Monitor initial sales for newly live books (18 total)",
       owner: "Anth",
       priority: "medium",
       completed: false,
-      project: "led-rebate-program"
+      project: "kdp-books"
+    },
+    {
+      id: "landing-page-tweaks",
+      text: "Check live landing pages for any visual glitches",
+      owner: "Skippy",
+      priority: "medium",
+      completed: false,
+      project: "landing-pages"
     }
   ],
   weather: {
     location: "St. John, NB",
-    summary: "Cloudy, -2°C (Feels like -8°C) ❄️"
+    summary: "Mostly Sunny, -5°C (Windy) ☀️"
   },
   reminders: [
-    "ALL KDP books are now approved! 🚀",
-    "Landing pages ready for final link update",
-    "Pinterest automation research confirmed (OAuth flow)"
+    "Sensory Boards idea is shelved (in Idea Inbox)",
+    "All 18 KDP books are LIVE and linked",
+    "Command Center updated"
   ]
 }
 
