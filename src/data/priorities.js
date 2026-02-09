@@ -3,32 +3,51 @@
 
 export const priorities = {
   date: "2026-02-09",
-  briefDelivered: false,
+  briefDelivered: true,
   tasks: [
     {
       id: "verify-deepseek",
-      text: "Verify DeepSeek model connection and spawn sub-agent for book generation",
+      text: "Verify DeepSeek model connection and spawn sub-agent",
       owner: "Skippy",
       priority: "high",
-      completed: false,
+      completed: true,
+      completedAt: "2026-02-09T00:30:00Z",
       project: "kdp-books"
     },
     {
-      id: "generate-tradesman-series",
-      text: "Generate concepts/prompts for 'Built With Hands' series (Carpenter, Mechanic)",
-      owner: "Skippy (DeepSeek)",
+      id: "generate-trilogy",
+      text: "Generate 'Life's Work' trilogy concepts (Trades, Road, Service)",
+      owner: "Skippy",
+      priority: "high",
+      completed: true,
+      completedAt: "2026-02-09T01:00:00Z",
+      project: "kdp-books"
+    },
+    {
+      id: "tablecloth-prototype",
+      text: "Print first 'Coloring Tablecloth' test strip on HP Latex",
+      owner: "Anth",
+      priority: "medium",
+      completed: false,
+      project: "business"
+    },
+    {
+      id: "landing-page-check",
+      text: "Verify Memory Care landing page layout is finally fixed",
+      owner: "Together",
       priority: "high",
       completed: false,
-      project: "kdp-books"
+      project: "landing-pages"
     }
   ],
   weather: {
     location: "St. John, NB",
-    summary: "Pending brief"
+    summary: "Mix of sun & cloud, -5°C (Chilly!) ☀️"
   },
   reminders: [
-    "DeepSeek V3 (Chat) confirmed as correct model ID",
-    "Ready to generate 'Built With Hands' series"
+    "Trilogy PDFs sent: Built With Hands, Open Road, Service & Uniform.",
+    "Tablecloth production plan PDF sent.",
+    "Sticking with Gemini 3 Flash for speed/stability."
   ]
 }
 
