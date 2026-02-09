@@ -2,42 +2,33 @@
 // This file is dynamically managed by the Command Center
 
 export const priorities = {
-  date: "2026-02-08",
-  briefDelivered: true,
+  date: "2026-02-09",
+  briefDelivered: false,
   tasks: [
     {
-      id: "life-work-concept",
-      text: "Brainstorm 'Life's Work' coloring book series (Trades/Professions)",
-      owner: "Anth",
+      id: "verify-deepseek",
+      text: "Verify DeepSeek model connection and spawn sub-agent for book generation",
+      owner: "Skippy",
       priority: "high",
       completed: false,
       project: "kdp-books"
     },
     {
-      id: "monitor-sales",
-      text: "Monitor initial sales for newly live books (18 total)",
-      owner: "Anth",
-      priority: "medium",
+      id: "generate-tradesman-series",
+      text: "Generate concepts/prompts for 'Built With Hands' series (Carpenter, Mechanic)",
+      owner: "Skippy (DeepSeek)",
+      priority: "high",
       completed: false,
       project: "kdp-books"
-    },
-    {
-      id: "landing-page-tweaks",
-      text: "Check live landing pages for any visual glitches",
-      owner: "Skippy",
-      priority: "medium",
-      completed: false,
-      project: "landing-pages"
     }
   ],
   weather: {
     location: "St. John, NB",
-    summary: "Mostly Sunny, -5°C (Windy) ☀️"
+    summary: "Pending brief"
   },
   reminders: [
-    "Sensory Boards idea is shelved (in Idea Inbox)",
-    "All 18 KDP books are LIVE and linked",
-    "Command Center updated"
+    "DeepSeek V3 (Chat) confirmed as correct model ID",
+    "Ready to generate 'Built With Hands' series"
   ]
 }
 
