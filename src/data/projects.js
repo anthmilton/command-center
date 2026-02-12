@@ -364,6 +364,99 @@ export const projects = [
     techStack: ['HTML', 'CSS', 'JavaScript', 'books.json', 'GitHub', 'Vercel'],
     lastWorked: '2026-02-12',
     file: 'landing-pages.md'
+  },
+  {
+    id: 'memory-bridge-expansion',
+    name: 'Memory Bridge Books - Product Line Expansion',
+    category: 'business',
+    progress: 5,
+    status: 'planning',
+    statusLabel: 'Roadmap Complete',
+    description: 'Strategic expansion beyond occupational memory care books. 4-tier roadmap: (1) Leisure/Recreation/Holiday volumes, (2) Regional/Cultural editions, (3) Format innovations (caregiver books, facility products, instructional guide), (4) Gen X future-proofing. Doubles addressable market by targeting leisure identity, not just work identity.',
+    blockers: ['Finish 3 outstanding Boomer books (BW2 Needle & Thread, BW3 Garden Gate, BW5 Beauty Shop) first'],
+    nextActions: [
+      'Complete outstanding Boomer Working Life volumes (3 books)',
+      'TIER 1: Develop Leisure volumes (Saturday Morning, Living Room, Friday Night, Church Pew)',
+      'TIER 1: Develop "Holidays Remembered" (launch October for seasonal spike)',
+      'TIER 1: Develop "Before We Grew Up" childhood volume (late-stage positioning)',
+      'TIER 2: Test Regional editions (Coal Country, Farm Belt, etc. - strong Etsy play)',
+      'TIER 3: Create instructional guide (free ebook lead magnet + paid KDP)',
+      'TIER 3: Develop caregiver burnout book ("While They Color")'
+    ],
+    techStack: ['AI Image Studio', 'KDP', 'Etsy', 'Pinterest', 'Same production pipeline as current books'],
+    lastWorked: '2026-02-12',
+    file: 'memory-bridge-expansion-roadmap.md',
+    expansionTiers: {
+      tier1: {
+        name: 'Natural Extensions',
+        priority: 'Immediate',
+        items: ['Leisure & Recreation (4 volumes)', 'Seasonal & Holiday volume', 'Childhood volume'],
+        impact: 'Doubles addressable market - everyone had hobbies, not everyone identifies by profession'
+      },
+      tier2: {
+        name: 'Parallel Niches',
+        priority: 'High',
+        items: ['Regional editions (Coal Country, Farm Belt, etc.)', 'Cultural/Ethnic editions', 'Couple\'s Book (his/hers pages)'],
+        impact: 'Geographic buyer hook + underserved cultural markets (African American, Latino, Jewish editions = zero competition)'
+      },
+      tier3: {
+        name: 'Format Innovations',
+        priority: 'Medium',
+        items: ['Instructional guide (free + paid)', 'Caregiver burnout book', 'Activity companion books', 'Facility tear-out pads'],
+        impact: 'Brand authority + B2B facility sales + caregiver market (add-on sales)'
+      },
+      tier4: {
+        name: 'Future-Proofing',
+        priority: 'Long-term',
+        items: ['Gen X line (1980s-2000s)', 'Early-onset/pediatric'],
+        impact: 'First-mover advantage for next demographic wave (10-15 years out)'
+      }
+    },
+    keyInsights: [
+      'Leisure identity > occupational identity for broader market',
+      'Holiday volume = seasonal spike potential (Oct-Dec + Mother\'s/Father\'s Day)',
+      'Childhood volume = "late-stage" clinical differentiator',
+      'Regional editions = Etsy gold (niche wins on Etsy)',
+      'Cultural/ethnic = blue ocean (zero culturally-specific memory care products exist)',
+      'Instructional guide = authority builder + email list lead magnet'
+    ]
+  },
+  {
+    id: 'memory-care-instructional-guide',
+    name: 'Memory Care Instructional Guide',
+    category: 'business',
+    progress: 0,
+    status: 'idea',
+    statusLabel: 'Concept Validated',
+    description: 'Instructional guide book: "How to use therapeutic coloring for Alzheimer\'s patients." Free ebook (lead magnet for email list) + paid KDP version ($9.99-12.99). Transforms coloring books from "activity supplies" to "evidence-based therapeutic system." Every chapter = 2-3 educational Pinterest pins.',
+    blockers: ['Defer writing to free LLM to save API costs (strategic role only)'],
+    nextActions: [
+      'Outline chapter structure (9 chapters planned)',
+      'Research reminiscence therapy studies for citations',
+      'Draft Chapter 1 pilot for tone/style',
+      'Design cover mockup (professional, warm, credible)',
+      'Write full guide (15,000-20,000 words)',
+      'Format for KDP print + PDF ebook',
+      'Launch: Amazon KDP physical + Gumroad free + Etsy bundles',
+      'Create 18-27 educational Pinterest pins (2-3 per chapter)'
+    ],
+    techStack: ['Writing (external LLM)', 'KDP', 'Gumroad (email capture)', 'Etsy (bundle component)'],
+    lastWorked: '2026-02-12',
+    file: 'memory-care-instructional-guide.md',
+    multiPlatformStrategy: {
+      freeEbook: 'Gumroad with email capture - builds owned audience for launches',
+      paidPhysical: 'Amazon KDP $9.99-12.99 - credibility + "frequently bought together" cross-sells',
+      etsyBundle: 'Caregiver Starter Kit ($24.99): 3 books + guide + conversation cards',
+      pinterest: 'Each chapter generates 2-3 educational pins = 18-27 pins total'
+    },
+    strategicValue: [
+      'Positions Margaret Whitmore as THE memory care coloring authority',
+      'Lead magnet for email list (priceless for future launches)',
+      'Transforms product from "coloring book" to "therapeutic system"',
+      'Activity directors can justify facility purchases with guide',
+      'Reduces buyer anxiety (shows HOW to use books effectively)',
+      'Creates Pinterest content multiplier (9 chapters = 18-27 educational pins)'
+    ]
   }
 ]
 
