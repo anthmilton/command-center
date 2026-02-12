@@ -6,6 +6,34 @@ export const priorities = {
   briefDelivered: true,
   tasks: [
     {
+      id: "domain-registration",
+      text: "Register memorybridgebooks.com domain (+ .org/.net for protection)",
+      owner: "Anth",
+      priority: "urgent",
+      completed: false,
+      project: "memory-bridge-branding",
+      notes: "Domain available. Register ASAP before someone else grabs it. ~$40/year for all 3."
+    },
+    {
+      id: "trademark-filing",
+      text: "File USPTO trademark for 'Memory Bridge Books' (Class 016: Printed materials)",
+      owner: "Anth",
+      priority: "high",
+      completed: false,
+      blockedBy: "domain-registration",
+      project: "memory-bridge-branding",
+      notes: "File within 30 days. DIY ~$250-350 or attorney-assisted ~$750-1250. No conflicts found."
+    },
+    {
+      id: "dns-setup",
+      text: "Point memorybridgebooks.com DNS to Vercel (landing pages)",
+      owner: "Skippy",
+      priority: "high",
+      completed: false,
+      blockedBy: "domain-registration",
+      project: "memory-bridge-branding"
+    },
+    {
       id: "pinterest-cleanup",
       text: "Clean up Pinterest profile - archive non-memory-care boards, rebrand as 'Memory Bridge Books'",
       owner: "Anth",

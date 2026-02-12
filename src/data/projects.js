@@ -422,6 +422,37 @@ export const projects = [
     ]
   },
   {
+    id: 'memory-bridge-branding',
+    name: 'Memory Bridge Books - Brand Identity & Domain',
+    category: 'business',
+    progress: 10,
+    status: 'wip',
+    statusLabel: 'In Progress',
+    description: 'Lock down "Memory Bridge Books" brand identity. Domain registration (memorybridgebooks.com available!), trademark filing (no conflicts found), DNS setup, and consistent branding across all platforms (Pinterest, Amazon, Etsy, landing pages).',
+    blockers: [],
+    nextActions: [
+      '🔴 URGENT: Register memorybridgebooks.com domain (Namecheap/Google Domains ~$12/yr)',
+      'Register defensive domains (.org, .net for protection ~$40 total/yr)',
+      'File USPTO trademark for "Memory Bridge Books" - Class 016: Printed materials (~$250-350 DIY or $750-1250 w/ attorney)',
+      'Point DNS to Vercel landing pages',
+      'Update Pinterest profile branding',
+      'Update Amazon Author Central branding',
+      'Update Etsy shop name (when launched)',
+      'Design Memory Bridge Books logo'
+    ],
+    techStack: ['Domain Registration', 'USPTO Trademark System', 'DNS/Vercel', 'Brand Identity'],
+    lastWorked: '2026-02-12',
+    file: null,
+    researchFindings: {
+      domainAvailable: true,
+      primaryDomain: 'memorybridgebooks.com',
+      trademarkConflicts: 'None found for books/printed materials',
+      existingUse: 'Memory Bridge Foundation (.org) is nonprofit advocacy - different market, no product conflicts',
+      riskAssessment: 'LOW - clear differentiation with "BOOKS" suffix, different goods/services category',
+      recommendation: 'Proceed with confidence. Register domain immediately.'
+    }
+  },
+  {
     id: 'memory-care-instructional-guide',
     name: 'Memory Care Instructional Guide',
     category: 'business',
