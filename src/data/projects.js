@@ -193,41 +193,76 @@ export const projects = [
   },
   {
     id: 'kdp-books',
-    name: 'KDP Books',
+    name: 'Memory Bridge Books (KDP)',
     category: 'business',
     progress: 100,
     status: 'live',
-    statusLabel: '100% Live',
-    description: 'AI-generated coloring books. All 18 books now APPROVED and LIVE on Amazon. Catalog fully linked on landing pages.',
+    statusLabel: 'Live + Growing',
+    description: 'Memory care coloring books by Margaret Whitmore. 8 LIVE (3 classic nostalgic + 2 occupational + 3 fishing), 4 PENDING approval (occupational series). Focus shifted to MEMORY CARE EXCLUSIVELY for Pinterest/Etsy. Gothic/Kawaii remain live but not actively promoted.',
     blockers: [],
     nextActions: [
-      'Monitor sales performance',
-      'Continue Pinterest pins',
-      'Brainstorm "Life\'s Work" trade-skill series'
+      'Monitor 4 pending occupational book approvals',
+      'Pinterest: Rebrand profile as "Memory Bridge Books" (memory care only)',
+      'Position occupational series as differentiator ("Activities for Men with Dementia")',
+      'Create "Working Life Collection" bundle on Etsy',
+      'Track which books convert best via Pinterest → Etsy → Amazon funnel'
     ],
-    techStack: ['AI Image Studio', 'KDP', 'Pinterest'],
-    lastWorked: '2026-02-08',
-    file: 'kdp-books.md'
+    techStack: ['AI Image Studio', 'KDP', 'Pinterest', 'Etsy', 'books.json'],
+    lastWorked: '2026-02-12',
+    file: 'kdp-books.md',
+    catalog: {
+      live: 8,
+      pending: 4,
+      total: 12,
+      breakdown: {
+        'Classic Memory Care': 3,
+        'Occupational (Live)': 2,
+        'Fishing (Memory Care angle)': 3,
+        'Occupational (Pending)': 4
+      }
+    }
   },
   {
     id: 'pinterest-automation',
     name: 'Pinterest Pin Automation',
     category: 'factory',
-    progress: 5,
-    status: 'idea',
-    statusLabel: 'Planned',
-    description: 'Automate Pinterest pin creation and posting through AI Image Studio. Generate 3-5 pins per book automatically instead of manual Canva work. Templates: cover shot, interior sample, problem/solution.',
-    blockers: ['Need to complete manual phase first (learn what works)', 'Template design needed'],
+    progress: 30,
+    status: 'wip',
+    statusLabel: 'In Progress',
+    description: 'Full Pinterest automation via official API. Skippy auto-posts pins from queue folder with SEO-optimized descriptions. OAuth 2.0 refresh token flow for persistent access. Anth creates pin images, Skippy handles everything else.',
+    blockers: ['Need Pinterest Developer App setup (5 mins)', 'OAuth tokens from Anth'],
     nextActions: [
-      'Finish manual Pinterest campaign (validate pin styles)',
-      'Design pin templates for automation',
-      'Build pinterest_pin_generator.py module',
-      'Integrate with AI Image Studio',
-      'Optional: Pinterest API for auto-posting'
+      'Anth: Set up Pinterest Developer App (get App ID/Secret)',
+      'Anth: Complete OAuth flow (one-time browser auth)',
+      'Skippy: Build pin posting script with refresh token logic',
+      'Skippy: Create /pinterest-queue/ folder structure',
+      'Test with 5-10 pins manually before full automation',
+      'Deploy automated posting (5-7 pins/day)'
     ],
-    techStack: ['Python', 'Pillow', 'AI Image Studio', 'Pinterest API (optional)'],
-    lastWorked: '2026-02-03',
-    file: 'pinterest-automation-idea.md'
+    techStack: ['Python', 'Pinterest API v5', 'OAuth 2.0', 'Queue folder system'],
+    lastWorked: '2026-02-12',
+    file: 'pinterest-automation.md'
+  },
+  {
+    id: 'etsy-shop',
+    name: 'Memory Bridge Books - Etsy Shop',
+    category: 'business',
+    progress: 15,
+    status: 'wip',
+    statusLabel: 'Planning',
+    description: 'Etsy shop for Memory Bridge Books digital downloads. Individual PDFs ($8.99), themed bundles ($24.99), complete collection ($49.99). High margin digital sales + Amazon physical book funnel. Skippy will automate listing creation/management.',
+    blockers: ['Need Etsy Developer Account setup', 'Define product templates'],
+    nextActions: [
+      'Anth: Clean up Pinterest profile (archive non-memory-care boards)',
+      'Anth: Set up Etsy Developer Account (after Pinterest automation running)',
+      'Define product bundle structure (1950s Collection, Working Life Collection, etc.)',
+      'Skippy: Build Etsy listing automation script',
+      'Launch with 8 live books as individual listings',
+      'Create 2-3 themed bundles'
+    ],
+    techStack: ['Etsy API', 'Digital PDFs', 'books.json integration'],
+    lastWorked: '2026-02-12',
+    file: 'etsy-shop.md'
   },
   {
     id: 'api-cost-tracker',
@@ -317,15 +352,17 @@ export const projects = [
     category: 'business',
     progress: 100,
     status: 'live',
-    statusLabel: '100% Live',
-    description: 'Multi-page landing system for Blackwood Illustrated. Hub page + 4 niche-specific pages. Live on Vercel. Bass page added.',
+    statusLabel: 'Live + Updated',
+    description: 'Multi-page landing system for Blackwood Illustrated. Hub page shows all genres (SEO benefit), but MEMORY CARE is the hero section. Pinterest traffic will funnel exclusively to memory care page. Updated books.json with 8 live + 4 pending occupational books.',
     blockers: [],
     nextActions: [
-      'Monitor traffic from Pinterest',
-      'Visual tweaks as needed'
+      'Update memorycare.html to feature occupational series prominently',
+      'Add cover images for 2 live occupational books (when available)',
+      'Monitor Pinterest → Landing Page → Amazon/Etsy conversion funnel',
+      'Consider "Coming Soon" badges for 4 pending books'
     ],
-    techStack: ['HTML', 'CSS', 'JavaScript', 'Groundwood Paper Banner', 'Vercel'],
-    lastWorked: '2026-02-08',
+    techStack: ['HTML', 'CSS', 'JavaScript', 'books.json', 'GitHub', 'Vercel'],
+    lastWorked: '2026-02-12',
     file: 'landing-pages.md'
   }
 ]

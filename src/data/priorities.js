@@ -2,52 +2,64 @@
 // This file is dynamically managed by the Command Center
 
 export const priorities = {
-  date: "2026-02-09",
+  date: "2026-02-12",
   briefDelivered: true,
   tasks: [
     {
-      id: "verify-deepseek",
-      text: "Verify DeepSeek model connection and spawn sub-agent",
-      owner: "Skippy",
-      priority: "high",
-      completed: true,
-      completedAt: "2026-02-09T00:30:00Z",
-      project: "kdp-books"
-    },
-    {
-      id: "generate-trilogy",
-      text: "Generate 'Life's Work' trilogy concepts (Trades, Road, Service)",
-      owner: "Skippy",
-      priority: "high",
-      completed: true,
-      completedAt: "2026-02-09T01:00:00Z",
-      project: "kdp-books"
-    },
-    {
-      id: "tablecloth-prototype",
-      text: "Print first 'Coloring Tablecloth' test strip on HP Latex",
+      id: "pinterest-cleanup",
+      text: "Clean up Pinterest profile - archive non-memory-care boards, rebrand as 'Memory Bridge Books'",
       owner: "Anth",
-      priority: "medium",
-      completed: false,
-      project: "business"
-    },
-    {
-      id: "landing-page-check",
-      text: "Verify Memory Care landing page layout is finally fixed",
-      owner: "Together",
       priority: "high",
       completed: false,
+      project: "pinterest-automation"
+    },
+    {
+      id: "pinterest-dev-setup",
+      text: "Set up Pinterest Developer App (get App ID & Secret)",
+      owner: "Anth",
+      priority: "high",
+      completed: false,
+      blockedBy: "pinterest-cleanup",
+      project: "pinterest-automation"
+    },
+    {
+      id: "update-command-center",
+      text: "Deep review & update of Command Center - make it the single source of truth",
+      owner: "Skippy",
+      priority: "high",
+      completed: true,
+      completedAt: "2026-02-12T02:15:00Z",
+      project: "command-center"
+    },
+    {
+      id: "books-json-update",
+      text: "Updated books.json with 8 live + 4 pending occupational memory care books",
+      owner: "Skippy",
+      priority: "high",
+      completed: true,
+      completedAt: "2026-02-12T01:40:00Z",
       project: "landing-pages"
+    },
+    {
+      id: "telegram-reconnect",
+      text: "Reconnected Telegram after config reset",
+      owner: "Skippy",
+      priority: "high",
+      completed: true,
+      completedAt: "2026-02-12T01:10:00Z",
+      project: "infrastructure"
     }
   ],
   weather: {
     location: "St. John, NB",
-    summary: "Mix of sun & cloud, -5°C (Chilly!) ☀️"
+    summary: "Snowfall warning - 15-20 cm expected through Thursday morning ❄️"
   },
   reminders: [
-    "Trilogy PDFs sent: Built With Hands, Open Road, Service & Uniform.",
-    "Tablecloth production plan PDF sent.",
-    "Sticking with Gemini 3 Flash for speed/stability."
+    "Telegram is back online and working!",
+    "Strategy pivot: Memory care ONLY for Pinterest/Etsy marketing",
+    "Occupational series = differentiator ('Activities for Men with Dementia')",
+    "2-phase automation: Pinterest first, then Etsy",
+    "books.json updated and pushed to GitHub/Vercel"
   ]
 }
 
