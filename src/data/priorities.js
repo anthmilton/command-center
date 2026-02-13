@@ -2,9 +2,18 @@
 // This file is dynamically managed by the Command Center
 
 export const priorities = {
-  date: "2026-02-12",
-  briefDelivered: true,
+  date: "2026-02-13",
+  briefDelivered: false,
   tasks: [
+    {
+      id: "browser-extension-fix",
+      text: "Fix browser extension - Edit openclaw.json to connect local node to Zeabur gateway",
+      owner: "Anth",
+      priority: "high",
+      completed: false,
+      project: "browser-access",
+      notes: "Exact steps documented in memory/browser-extension-fix-steps.md. Edit C:\\Users\\User\\.openclaw\\openclaw.json - change gateway.mode from 'local' to 'remote' and add gateway.url"
+    },
     {
       id: "domain-registration",
       text: "Register memorybridgebooks.com domain (+ .org/.net for protection)",
@@ -81,14 +90,14 @@ export const priorities = {
   ],
   weather: {
     location: "St. John, NB",
-    summary: "Snowfall warning - 15-20 cm expected through Thursday morning ❄️"
+    summary: "Check tomorrow's weather"
   },
   reminders: [
-    "Telegram is back online and working!",
-    "Strategy pivot: Memory care ONLY for Pinterest/Etsy marketing",
-    "Occupational series = differentiator ('Activities for Men with Dementia')",
-    "2-phase automation: Pinterest first, then Etsy",
-    "books.json updated and pushed to GitHub/Vercel"
+    "✅ memorybridgebooks.com domain LIVE!",
+    "Browser extension 90% there - just need config fix (see browser-extension-fix-steps.md)",
+    "Pinterest waiting for API approval (1-3 business days)",
+    "Finish current book catalog before expansion",
+    "Trademark filing due by ~March 13 (30 days from domain registration)"
   ]
 }
 
