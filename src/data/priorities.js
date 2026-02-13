@@ -10,9 +10,20 @@ export const priorities = {
       text: "Register memorybridgebooks.com domain (+ .org/.net for protection)",
       owner: "Anth",
       priority: "urgent",
-      completed: false,
+      completed: true,
+      completedAt: "2026-02-13T01:30:00Z",
       project: "memory-bridge-branding",
-      notes: "Domain available. Register ASAP before someone else grabs it. ~$40/year for all 3."
+      notes: "Registered .com via GoDaddy. Defensive domains (.org/.net) deferred for now."
+    },
+    {
+      id: "dns-setup",
+      text: "Point memorybridgebooks.com DNS to Vercel (landing pages)",
+      owner: "Skippy",
+      priority: "high",
+      completed: true,
+      completedAt: "2026-02-13T01:55:00Z",
+      project: "memory-bridge-branding",
+      notes: "DNS configured with Vercel's updated records. No warnings. Site live!"
     },
     {
       id: "trademark-filing",
@@ -20,18 +31,8 @@ export const priorities = {
       owner: "Anth",
       priority: "high",
       completed: false,
-      blockedBy: "domain-registration",
       project: "memory-bridge-branding",
-      notes: "File within 30 days. DIY ~$250-350 or attorney-assisted ~$750-1250. No conflicts found."
-    },
-    {
-      id: "dns-setup",
-      text: "Point memorybridgebooks.com DNS to Vercel (landing pages)",
-      owner: "Skippy",
-      priority: "high",
-      completed: false,
-      blockedBy: "domain-registration",
-      project: "memory-bridge-branding"
+      notes: "File within 30 days of domain registration (by ~March 13). DIY ~$250-350 or attorney-assisted ~$750-1250. No conflicts found."
     },
     {
       id: "pinterest-cleanup",
