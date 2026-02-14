@@ -422,6 +422,45 @@ export const projects = [
     ]
   },
   {
+    id: 'browser-access',
+    name: 'Browser Extension Access (Remote Gateway)',
+    category: 'apps',
+    progress: 95,
+    status: 'wip',
+    statusLabel: '95% - Pairing Blocker',
+    description: 'Enable Skippy to see and control Anth\'s Chrome browser (especially Pinterest) via OpenClaw browser extension. Windows node host connecting to Zeabur gateway successfully, just needs pairing approval method. 3.5 hours invested - WILL complete this.',
+    blockers: ['Node pairing approval workflow unclear - need OpenClaw documentation'],
+    nextActions: [
+      '🔴 Research OpenClaw docs: gateway node pairing for remote setups',
+      'Check docs.openclaw.ai/gateway/nodes and /browser/extension',
+      'Search GitHub issues for "pairing required" + "remote gateway"',
+      'Ask in OpenClaw Discord: "How to approve node pairing for remote gateway setup?"',
+      'Alternative: Find config syntax for gateway.nodes.pairing auto-approval',
+      'Once solved: openclaw node run (Windows) → Extension ON → Pinterest access!'
+    ],
+    techStack: ['OpenClaw CLI', 'Chrome Extension', 'WebSocket (wss://)', 'Remote Gateway Config'],
+    lastWorked: '2026-02-14',
+    file: 'browser-extension-progress-log.md',
+    statusDetails: {
+      working: [
+        'OpenClaw CLI installed on Windows (2026.2.12)',
+        'Browser extension loaded in Chrome',
+        'Local config pointing to wss://anthmilton.zeabur.app',
+        'Gateway token retrieved (xKYCwzviSl60Uc5N2P4aj37p9Go1WZ8m)',
+        'Node connecting to Zeabur successfully',
+        'Authentication passing (token accepted)'
+      ],
+      blocker: 'Gateway rejects with "pairing required" (code 1008)',
+      needsResearch: [
+        'How to approve node pairing in Zeabur Control UI',
+        'CLI commands for node approval',
+        'Config syntax for gateway.nodes.pairing',
+        'Alternative: pre-register node before connecting'
+      ],
+      commandThatWorks: 'openclaw node run --host anthmilton.zeabur.app --port 443 --tls (with OPENCLAW_GATEWAY_TOKEN env var)'
+    }
+  },
+  {
     id: 'memory-bridge-branding',
     name: 'Memory Bridge Books - Brand Identity & Domain',
     category: 'business',

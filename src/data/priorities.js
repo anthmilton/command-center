@@ -6,13 +6,15 @@ export const priorities = {
   briefDelivered: false,
   tasks: [
     {
-      id: "browser-extension-fix",
-      text: "Fix browser extension - Edit openclaw.json to connect local node to Zeabur gateway",
-      owner: "Anth",
+      id: "browser-extension-complete",
+      text: "🔴 COMPLETE BROWSER ACCESS - Solve node pairing for remote gateway (95% done, just needs approval method)",
+      owner: "Anth + Skippy",
       priority: "high",
       completed: false,
       project: "browser-access",
-      notes: "Exact steps documented in memory/browser-extension-fix-steps.md. Edit C:\\Users\\User\\.openclaw\\openclaw.json - change gateway.mode from 'local' to 'remote' and add gateway.url"
+      notes: "EVERYTHING working except pairing approval. See memory/browser-extension-progress-log.md for complete status. Need: OpenClaw docs on gateway.nodes.pairing config OR approval workflow for remote nodes. 3.5 hours invested, won't give up.",
+      blockers: ["Need OpenClaw documentation on node pairing approval for remote gateways"],
+      nextAttempt: "Research docs.openclaw.ai for node pairing, check GitHub issues, OR ask in OpenClaw Discord"
     },
     {
       id: "domain-registration",
