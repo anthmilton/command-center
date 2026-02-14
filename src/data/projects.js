@@ -211,15 +211,17 @@ export const projects = [
     lastWorked: '2026-02-12',
     file: 'kdp-books.md',
     catalog: {
-      live: 8,
-      pending: 4,
+      live: 11,
+      pending: 1,
       total: 12,
       breakdown: {
-        'Classic Memory Care': 3,
-        'Occupational (Live)': 2,
-        'Fishing (Memory Care angle)': 3,
-        'Occupational (Pending)': 4
-      }
+        'Classic Memory Care (1950s)': 3,
+        'Occupational - Vintage (1950s)': 2,
+        'Occupational - Boomer (1970s-80s)': 3,
+        'Fishing (Bold & Easy)': 3,
+        'Occupational (Pending)': 1
+      },
+      recentLaunch: '3 Boomer Working Life books went live Feb 13: Built With Hands, Open Road & Field, Service & Uniform'
     }
   },
   {
