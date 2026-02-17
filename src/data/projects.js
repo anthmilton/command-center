@@ -197,74 +197,85 @@ export const projects = [
     category: 'business',
     progress: 100,
     status: 'live',
-    statusLabel: 'Live + Growing',
-    description: 'Memory care coloring books by Margaret Whitmore. 8 LIVE (3 classic nostalgic + 2 occupational + 3 fishing), 4 PENDING approval (occupational series). Focus shifted to MEMORY CARE EXCLUSIVELY for Pinterest/Etsy. Gothic/Kawaii remain live but not actively promoted.',
+    statusLabel: '12 Books Live ✓',
+    description: 'Memory care coloring books by Margaret Whitmore. 12 BOOKS ALL LIVE on Amazon. Focus: MEMORY CARE EXCLUSIVELY for Pinterest/Etsy. Gothic/Kawaii remain live but not actively promoted. Working Life Collection = competitive differentiator ("Activities for Men with Dementia").',
     blockers: [],
     nextActions: [
-      'Monitor 4 pending occupational book approvals',
-      'Pinterest: Rebrand profile as "Memory Bridge Books" (memory care only)',
-      'Position occupational series as differentiator ("Activities for Men with Dementia")',
+      'Wait for Pinterest API approval to begin pin automation',
+      'Monitor Etsy sales data (all 12 listings live)',
+      'Track conversion funnel: Pinterest → Etsy → Amazon',
       'Create "Working Life Collection" bundle on Etsy',
-      'Track which books convert best via Pinterest → Etsy → Amazon funnel'
+      'Expand occupational series with new eras/professions based on sales data'
     ],
     techStack: ['AI Image Studio', 'KDP', 'Pinterest', 'Etsy', 'books.json'],
-    lastWorked: '2026-02-12',
+    lastWorked: '2026-02-17',
     file: 'kdp-books.md',
     catalog: {
-      live: 11,
-      pending: 1,
+      live: 12,
+      pending: 0,
       total: 12,
       breakdown: {
         'Classic Memory Care (1950s)': 3,
-        'Occupational - Vintage (1950s)': 2,
+        'Occupational - Vintage (1950s)': 3,
         'Occupational - Boomer (1970s-80s)': 3,
-        'Fishing (Bold & Easy)': 3,
-        'Occupational (Pending)': 1
+        'Fishing (Bold & Easy)': 3
       },
-      recentLaunch: '3 Boomer Working Life books went live Feb 13: Built With Hands, Open Road & Field, Service & Uniform'
+      recentLaunch: 'All 12 books now live. Working Life Collection complete (6 occupational books spanning 1950s-1980s).'
     }
   },
   {
     id: 'pinterest-automation',
     name: 'Pinterest Pin Automation',
     category: 'factory',
-    progress: 30,
+    progress: 85,
     status: 'wip',
-    statusLabel: 'In Progress',
-    description: 'Full Pinterest automation via official API. Skippy auto-posts pins from queue folder with SEO-optimized descriptions. OAuth 2.0 refresh token flow for persistent access. Anth creates pin images, Skippy handles everything else.',
-    blockers: ['Need Pinterest Developer App setup (5 mins)', 'OAuth tokens from Anth'],
+    statusLabel: 'Waiting API Approval',
+    description: 'Full Pinterest automation via official API. Skippy auto-posts pins from queue folder with SEO-optimized descriptions. OAuth 2.0 refresh token flow for persistent access. Boards created, scripts built, image processing scripts ready. Waiting for Pinterest Developer API approval.',
+    blockers: ['Pinterest API application in review (submitted, awaiting approval)'],
     nextActions: [
-      'Anth: Set up Pinterest Developer App (get App ID/Secret)',
-      'Anth: Complete OAuth flow (one-time browser auth)',
-      'Skippy: Build pin posting script with refresh token logic',
-      'Skippy: Create /pinterest-queue/ folder structure',
-      'Test with 5-10 pins manually before full automation',
+      'Wait for Pinterest API approval notification',
+      'Once approved: Get fresh access token',
+      'Test connection with queue system',
+      'Generate pin images from book covers (1000x1500px)',
+      'Create queue JSON files with board IDs',
       'Deploy automated posting (5-7 pins/day)'
     ],
-    techStack: ['Python', 'Pinterest API v5', 'OAuth 2.0', 'Queue folder system'],
-    lastWorked: '2026-02-12',
-    file: 'pinterest-automation.md'
+    techStack: ['Python', 'Pinterest API v5', 'OAuth 2.0', 'Queue folder system', 'ImageMagick', 'Windows BAT scripts'],
+    lastWorked: '2026-02-17',
+    file: 'pinterest-automation.md',
+    completedMilestones: [
+      '✅ 10 Pinterest boards created (5 primary, 5 secondary)',
+      '✅ Image processing scripts built (crop-covers.bat, resize-for-pins.bat, crop-to-square.bat)',
+      '✅ Automation scripts written and tested',
+      '⏳ API approval pending'
+    ]
   },
   {
     id: 'etsy-shop',
     name: 'Memory Bridge Books - Etsy Shop',
     category: 'business',
-    progress: 15,
-    status: 'wip',
-    statusLabel: 'Planning',
-    description: 'Etsy shop for Memory Bridge Books digital downloads. Individual PDFs ($8.99), themed bundles ($24.99), complete collection ($49.99). High margin digital sales + Amazon physical book funnel. Skippy will automate listing creation/management.',
-    blockers: ['Need Etsy Developer Account setup', 'Define product templates'],
+    progress: 90,
+    status: 'live',
+    statusLabel: '12 Listings Live ✓',
+    description: 'Etsy shop LIVE at etsy.com/shop/MemoryBridgeBooks. All 12 Memory Bridge Books listed as digital downloads. Individual PDFs with What\'s Inside graphics, full descriptions, SEO tags. High margin digital sales + Amazon physical book cross-promotion funnel active.',
+    blockers: [],
     nextActions: [
-      'Anth: Clean up Pinterest profile (archive non-memory-care boards)',
-      'Anth: Set up Etsy Developer Account (after Pinterest automation running)',
-      'Define product bundle structure (1950s Collection, Working Life Collection, etc.)',
-      'Skippy: Build Etsy listing automation script',
-      'Launch with 8 live books as individual listings',
-      'Create 2-3 themed bundles'
+      'Monitor sales data and conversion rates',
+      'Create themed bundles (1950s Collection, Working Life Collection, Complete Set)',
+      'Add more listing photos (currently 5-10 per listing)',
+      'Set up Etsy Developer Account for API automation (Phase 2)',
+      'Build Etsy listing automation script (future)',
+      'Track Pinterest → Etsy conversion once pins go live'
     ],
-    techStack: ['Etsy API', 'Digital PDFs', 'books.json integration'],
-    lastWorked: '2026-02-12',
-    file: 'etsy-shop.md'
+    techStack: ['Etsy Manual Listings', 'Digital PDFs', 'books.json integration', 'What\'s Inside graphics'],
+    lastWorked: '2026-02-17',
+    file: 'etsy-shop.md',
+    liveListings: {
+      individual: 12,
+      bundles: 0,
+      totalRevenue: 'TBD',
+      launched: '2026-02-17'
+    }
   },
   {
     id: 'api-cost-tracker',
@@ -466,25 +477,30 @@ export const projects = [
     id: 'memory-bridge-branding',
     name: 'Memory Bridge Books - Brand Identity & Domain',
     category: 'business',
-    progress: 50,
+    progress: 80,
     status: 'wip',
-    statusLabel: 'Domain Live ✓',
-    description: 'Lock down "Memory Bridge Books" brand identity. Domain registration (memorybridgebooks.com available!), trademark filing (no conflicts found), DNS setup, and consistent branding across all platforms (Pinterest, Amazon, Etsy, landing pages).',
+    statusLabel: 'Brand Identity Complete',
+    description: 'Memory Bridge Books brand identity established. Domain live, Author Central created, Margaret Whitmore bio published across platforms, landing page with About section deployed. Consistent branding on Amazon, Etsy, and memorybridgebooks.com. Only trademark filing remains.',
     blockers: [],
     nextActions: [
-      '✅ DONE: Registered memorybridgebooks.com via GoDaddy',
-      '✅ DONE: DNS configured and pointing to Vercel - site live!',
       '🔴 HIGH: File USPTO trademark within 30 days (~by March 13)',
-      'Update landing pages with Memory Bridge Books branding',
-      'Update Pinterest profile branding',
-      'Update Amazon Author Central branding',
-      'Update Etsy shop name (when launched)',
-      'Design Memory Bridge Books logo',
+      'Fix apex domain DNS (memorybridgebooks.com without www)',
+      'Update Pinterest profile branding when API approved',
+      'Design Memory Bridge Books logo (optional enhancement)',
       'Consider defensive domains (.org/.net) if brand takes off'
     ],
-    techStack: ['Domain Registration', 'USPTO Trademark System', 'DNS/Vercel', 'Brand Identity'],
-    lastWorked: '2026-02-12',
+    techStack: ['Domain Registration', 'USPTO Trademark System', 'DNS/Vercel', 'Brand Identity', 'Author Central'],
+    lastWorked: '2026-02-17',
     file: null,
+    completedMilestones: [
+      '✅ Domain registered: memorybridgebooks.com',
+      '✅ DNS configured and pointing to Vercel',
+      '✅ Author Central page created: amazon.com/author/memorybridgebooks',
+      '✅ Margaret Whitmore bio written for all platforms',
+      '✅ About Margaret section added to landing page with photo',
+      '✅ Etsy shop branded as MemoryBridgeBooks',
+      '✅ All 12 book pages updated with Etsy + Amazon links'
+    ],
     researchFindings: {
       domainAvailable: true,
       primaryDomain: 'memorybridgebooks.com',

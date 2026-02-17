@@ -2,43 +2,21 @@
 // This file is dynamically managed by the Command Center
 
 export const priorities = {
-  date: "2026-02-13",
+  date: "2026-02-17",
   briefDelivered: false,
   tasks: [
     {
-      id: "browser-extension-complete",
-      text: "🔴 COMPLETE BROWSER ACCESS - Solve node pairing for remote gateway (95% done, just needs approval method)",
-      owner: "Anth + Skippy",
+      id: "pinterest-api-approval",
+      text: "⏳ Wait for Pinterest API approval (submitted, in review)",
+      owner: "Pinterest Team",
       priority: "high",
       completed: false,
-      project: "browser-access",
-      notes: "EVERYTHING working except pairing approval. See memory/browser-extension-progress-log.md for complete status. Need: OpenClaw docs on gateway.nodes.pairing config OR approval workflow for remote nodes. 3.5 hours invested, won't give up.",
-      blockers: ["Need OpenClaw documentation on node pairing approval for remote gateways"],
-      nextAttempt: "Research docs.openclaw.ai for node pairing, check GitHub issues, OR ask in OpenClaw Discord"
-    },
-    {
-      id: "domain-registration",
-      text: "Register memorybridgebooks.com domain (+ .org/.net for protection)",
-      owner: "Anth",
-      priority: "urgent",
-      completed: true,
-      completedAt: "2026-02-13T01:30:00Z",
-      project: "memory-bridge-branding",
-      notes: "Registered .com via GoDaddy. Defensive domains (.org/.net) deferred for now."
-    },
-    {
-      id: "dns-setup",
-      text: "Point memorybridgebooks.com DNS to Vercel (landing pages)",
-      owner: "Skippy",
-      priority: "high",
-      completed: true,
-      completedAt: "2026-02-13T01:55:00Z",
-      project: "memory-bridge-branding",
-      notes: "DNS configured with Vercel's updated records. No warnings. Site live!"
+      project: "pinterest-automation",
+      notes: "Application submitted. Boards created (10 total). Pin templates ready. Just waiting for approval to start automation."
     },
     {
       id: "trademark-filing",
-      text: "File USPTO trademark for 'Memory Bridge Books' (Class 016: Printed materials)",
+      text: "🔴 File USPTO trademark for 'Memory Bridge Books' (Class 016: Printed materials)",
       owner: "Anth",
       priority: "high",
       completed: false,
@@ -46,48 +24,63 @@ export const priorities = {
       notes: "File within 30 days of domain registration (by ~March 13). DIY ~$250-350 or attorney-assisted ~$750-1250. No conflicts found."
     },
     {
-      id: "pinterest-cleanup",
-      text: "Clean up Pinterest profile - archive non-memory-care boards, rebrand as 'Memory Bridge Books'",
-      owner: "Anth",
-      priority: "high",
+      id: "apex-domain-fix",
+      text: "Fix memorybridgebooks.com DNS (apex domain not resolving without www)",
+      owner: "Skippy",
+      priority: "medium",
       completed: false,
-      project: "pinterest-automation"
+      project: "memory-bridge-branding",
+      notes: "www.memorybridgebooks.com works, but memorybridgebooks.com doesn't. Need to add A record or CNAME for apex domain in DNS."
     },
     {
-      id: "pinterest-dev-setup",
-      text: "Set up Pinterest Developer App (get App ID & Secret)",
-      owner: "Anth",
+      id: "etsy-complete",
+      text: "✅ All 12 Memory Bridge Books live on Etsy with full product listings",
+      owner: "Anth + Skippy",
       priority: "high",
-      completed: false,
-      blockedBy: "pinterest-cleanup",
-      project: "pinterest-automation"
+      completed: true,
+      completedAt: "2026-02-17T01:00:00Z",
+      project: "etsy-shop",
+      notes: "Shop live at etsy.com/shop/MemoryBridgeBooks. All 12 books listed with What's Inside graphics, descriptions, links added to memorybridgebooks.com"
     },
     {
-      id: "update-command-center",
-      text: "Deep review & update of Command Center - make it the single source of truth",
+      id: "about-margaret-section",
+      text: "✅ Added About Margaret section to memorybridgebooks.com",
       owner: "Skippy",
       priority: "high",
       completed: true,
-      completedAt: "2026-02-12T02:15:00Z",
-      project: "command-center"
+      completedAt: "2026-02-17T00:20:00Z",
+      project: "memory-bridge-branding",
+      notes: "Photo + full bio added to landing page. Responsive layout. Deployed via Vercel."
     },
     {
-      id: "books-json-update",
-      text: "Updated books.json with 8 live + 4 pending occupational memory care books",
+      id: "author-central",
+      text: "✅ Margaret Whitmore Author Central page created on Amazon",
       owner: "Skippy",
       priority: "high",
       completed: true,
-      completedAt: "2026-02-12T01:40:00Z",
-      project: "landing-pages"
+      completedAt: "2026-02-15T21:00:00Z",
+      project: "memory-bridge-branding",
+      notes: "https://www.amazon.com/author/memorybridgebooks - All books consolidated, bio written, consistent branding across platforms"
     },
     {
-      id: "telegram-reconnect",
-      text: "Reconnected Telegram after config reset",
+      id: "whats-inside-bullets",
+      text: "✅ Created What's Inside bullet points for all 12 books (Etsy graphics)",
       owner: "Skippy",
-      priority: "high",
+      priority: "medium",
       completed: true,
-      completedAt: "2026-02-12T01:10:00Z",
-      project: "infrastructure"
+      completedAt: "2026-02-16T23:50:00Z",
+      project: "etsy-shop",
+      notes: "Comma-separated format for Anth's production software. All 12 books documented."
+    },
+    {
+      id: "image-scripts",
+      text: "✅ Built crop-to-square.bat image processing script",
+      owner: "Skippy",
+      priority: "medium",
+      completed: true,
+      completedAt: "2026-02-16T23:54:00Z",
+      project: "pinterest-automation",
+      notes: "Joins crop-covers.bat and resize-for-pins.bat. Double-click batch script for Windows image processing."
     }
   ],
   weather: {
@@ -95,11 +88,12 @@ export const priorities = {
     summary: "Check tomorrow's weather"
   },
   reminders: [
-    "✅ memorybridgebooks.com domain LIVE!",
-    "Browser extension 90% there - just need config fix (see browser-extension-fix-steps.md)",
-    "Pinterest waiting for API approval (1-3 business days)",
-    "Finish current book catalog before expansion",
-    "Trademark filing due by ~March 13 (30 days from domain registration)"
+    "✅ memorybridgebooks.com LIVE with About Margaret section",
+    "✅ All 12 books live on Etsy + Amazon",
+    "✅ Author Central page complete",
+    "⏳ Pinterest API approval pending (boards ready, automation built)",
+    "🔴 Trademark filing due by ~March 13 (30 days from domain registration)",
+    "Fix apex domain DNS (memorybridgebooks.com without www)"
   ]
 }
 
