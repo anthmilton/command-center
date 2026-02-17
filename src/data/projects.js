@@ -197,30 +197,31 @@ export const projects = [
     category: 'business',
     progress: 100,
     status: 'live',
-    statusLabel: '12 Books Live ✓',
-    description: 'Memory care coloring books by Margaret Whitmore. 12 BOOKS ALL LIVE on Amazon. Focus: MEMORY CARE EXCLUSIVELY for Pinterest/Etsy. Gothic/Kawaii remain live but not actively promoted. Working Life Collection = competitive differentiator ("Activities for Men with Dementia").',
+    statusLabel: '12 Live + 5 Ready',
+    description: 'Memory care coloring books by Margaret Whitmore. 12 BOOKS LIVE on Amazon, 5 NEW BOOKS ready to upload (compiled with covers). Focus: MEMORY CARE EXCLUSIVELY for Pinterest/Etsy. Working Life Collection = competitive differentiator ("Activities for Men with Dementia").',
     blockers: [],
     nextActions: [
-      'Wait for Pinterest API approval to begin pin automation',
+      '🔴 Upload 5 new books to Amazon KDP',
+      'Wait for Pinterest API reapplication approval',
+      'Start manual pin posting (5-7/day) while waiting for API',
       'Monitor Etsy sales data (all 12 listings live)',
-      'Track conversion funnel: Pinterest → Etsy → Amazon',
-      'Create "Working Life Collection" bundle on Etsy',
-      'Expand occupational series with new eras/professions based on sales data'
+      'Create "Working Life Collection" bundle on Etsy after new books live'
     ],
     techStack: ['AI Image Studio', 'KDP', 'Pinterest', 'Etsy', 'books.json'],
     lastWorked: '2026-02-17',
     file: 'kdp-books.md',
     catalog: {
       live: 12,
-      pending: 0,
-      total: 12,
+      pending: 5,
+      total: 17,
       breakdown: {
         'Classic Memory Care (1950s)': 3,
         'Occupational - Vintage (1950s)': 3,
         'Occupational - Boomer (1970s-80s)': 3,
-        'Fishing (Bold & Easy)': 3
+        'Fishing (Bold & Easy)': 3,
+        'New Books (Ready to Launch)': 5
       },
-      recentLaunch: 'All 12 books now live. Working Life Collection complete (6 occupational books spanning 1950s-1980s).'
+      recentLaunch: '5 new books compiled and ready for Amazon upload today.'
     }
   },
   {
@@ -229,16 +230,15 @@ export const projects = [
     category: 'factory',
     progress: 85,
     status: 'wip',
-    statusLabel: 'Waiting API Approval',
-    description: 'Full Pinterest automation via official API. Skippy auto-posts pins from queue folder with SEO-optimized descriptions. OAuth 2.0 refresh token flow for persistent access. Boards created, scripts built, image processing scripts ready. Waiting for Pinterest Developer API approval.',
-    blockers: ['Pinterest API application in review (submitted, awaiting approval)'],
+    statusLabel: 'Reapplying for API',
+    description: 'Full Pinterest automation via official API. First application denied (bogus privacy policy link). Privacy policy now comprehensive and live. Reapplying today. Manual pin posting starts immediately (batch ready). Automation resumes once API approved.',
+    blockers: ['First API application denied - privacy policy issue (fixed)', 'Reapplication needed'],
     nextActions: [
-      'Wait for Pinterest API approval notification',
+      '🔴 Reapply for Pinterest API with proper privacy policy URL',
+      '🔴 Start manual pin posting TODAY (batch ready, 5-7/day)',
       'Once approved: Get fresh access token',
       'Test connection with queue system',
-      'Generate pin images from book covers (1000x1500px)',
-      'Create queue JSON files with board IDs',
-      'Deploy automated posting (5-7 pins/day)'
+      'Deploy automated posting'
     ],
     techStack: ['Python', 'Pinterest API v5', 'OAuth 2.0', 'Queue folder system', 'ImageMagick', 'Windows BAT scripts'],
     lastWorked: '2026-02-17',
@@ -247,7 +247,9 @@ export const projects = [
       '✅ 10 Pinterest boards created (5 primary, 5 secondary)',
       '✅ Image processing scripts built (crop-covers.bat, resize-for-pins.bat, crop-to-square.bat)',
       '✅ Automation scripts written and tested',
-      '⏳ API approval pending'
+      '✅ Comprehensive privacy policy created',
+      '✅ Pin batch ready for manual posting',
+      '⏳ Reapplying for API approval'
     ]
   },
   {

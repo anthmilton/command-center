@@ -3,97 +3,99 @@
 
 export const priorities = {
   date: "2026-02-17",
-  briefDelivered: false,
+  briefDelivered: true,
   tasks: [
     {
-      id: "pinterest-api-approval",
-      text: "⏳ Wait for Pinterest API approval (submitted, in review)",
-      owner: "Pinterest Team",
-      priority: "high",
+      id: "pinterest-reapply",
+      text: "🔴 URGENT: Reapply for Pinterest API with updated privacy policy",
+      owner: "Anth",
+      priority: "urgent",
       completed: false,
       project: "pinterest-automation",
-      notes: "Application submitted. Boards created (10 total). Pin templates ready. Just waiting for approval to start automation."
+      notes: "Privacy policy updated at memorybridgebooks.com/privacy.html. First application denied due to bogus privacy link. Reapply with proper URL.",
+      nextActions: [
+        "Go to Pinterest Developer Portal",
+        "Reapply for API access",
+        "Use privacy policy URL: https://memorybridgebooks.com/privacy.html",
+        "Wait for approval (typically 1-2 weeks)"
+      ]
     },
     {
-      id: "trademark-filing",
-      text: "🔴 File USPTO trademark for 'Memory Bridge Books' (Class 016: Printed materials)",
+      id: "dns-apex-fix",
+      text: "Fix GoDaddy DNS settings (apex domain without www)",
       owner: "Anth",
       priority: "high",
       completed: false,
       project: "memory-bridge-branding",
-      notes: "File within 30 days of domain registration (by ~March 13). DIY ~$250-350 or attorney-assisted ~$750-1250. No conflicts found."
+      notes: "www.memorybridgebooks.com works, but memorybridgebooks.com doesn't. Need to add A records: 76.76.21.21 and 76.76.21.98"
     },
     {
-      id: "apex-domain-fix",
-      text: "Fix memorybridgebooks.com DNS (apex domain not resolving without www)",
+      id: "amazon-5-new-books",
+      text: "🔴 Finish posting 5 remaining books to Amazon KDP",
+      owner: "Anth",
+      priority: "urgent",
+      completed: false,
+      project: "kdp-books",
+      notes: "5 new books compiled with covers, ready to upload. Books currently at 12 live, will be 17 after this."
+    },
+    {
+      id: "etsy-5-new-books",
+      text: "Post 5 new books to Etsy after Amazon approval",
+      owner: "Anth",
+      priority: "high",
+      completed: false,
+      blockedBy: "amazon-5-new-books",
+      project: "etsy-shop",
+      notes: "Wait for Amazon approval, then create Etsy listings for same 5 books"
+    },
+    {
+      id: "etsy-content-5-books",
+      text: "Create Etsy listing content for 5 new books",
       owner: "Skippy",
+      priority: "high",
+      completed: false,
+      project: "etsy-shop",
+      notes: "Need What's Inside bullet points (comma-separated format) for the 5 new books. Same format as whats-inside-bullets.md"
+    },
+    {
+      id: "start-posting-pins",
+      text: "🔴 Start posting Pinterest pins today (batch ready)",
+      owner: "Anth",
+      priority: "urgent",
+      completed: false,
+      project: "pinterest-automation",
+      notes: "Pins built and ready. Post manually while waiting for API approval. Aim for 5-7 pins/day."
+    },
+    {
+      id: "reddit-first-post",
+      text: "Deploy first Reddit post (5 posts ready)",
+      owner: "Anth",
       priority: "medium",
       completed: false,
-      project: "memory-bridge-branding",
-      notes: "www.memorybridgebooks.com works, but memorybridgebooks.com doesn't. Need to add A record or CNAME for apex domain in DNS."
+      project: "marketing",
+      notes: "reddit-posts.md has 5 complete posts. Start with r/dementia emotional story. Best times: 8-10 AM ET or 6-8 PM ET."
     },
     {
-      id: "etsy-complete",
-      text: "✅ All 12 Memory Bridge Books live on Etsy with full product listings",
-      owner: "Anth + Skippy",
-      priority: "high",
-      completed: true,
-      completedAt: "2026-02-17T01:00:00Z",
-      project: "etsy-shop",
-      notes: "Shop live at etsy.com/shop/MemoryBridgeBooks. All 12 books listed with What's Inside graphics, descriptions, links added to memorybridgebooks.com"
-    },
-    {
-      id: "about-margaret-section",
-      text: "✅ Added About Margaret section to memorybridgebooks.com",
+      id: "privacy-policy-updated",
+      text: "✅ Updated privacy policy for Pinterest API compliance",
       owner: "Skippy",
-      priority: "high",
+      priority: "urgent",
       completed: true,
-      completedAt: "2026-02-17T00:20:00Z",
-      project: "memory-bridge-branding",
-      notes: "Photo + full bio added to landing page. Responsive layout. Deployed via Vercel."
-    },
-    {
-      id: "author-central",
-      text: "✅ Margaret Whitmore Author Central page created on Amazon",
-      owner: "Skippy",
-      priority: "high",
-      completed: true,
-      completedAt: "2026-02-15T21:00:00Z",
-      project: "memory-bridge-branding",
-      notes: "https://www.amazon.com/author/memorybridgebooks - All books consolidated, bio written, consistent branding across platforms"
-    },
-    {
-      id: "whats-inside-bullets",
-      text: "✅ Created What's Inside bullet points for all 12 books (Etsy graphics)",
-      owner: "Skippy",
-      priority: "medium",
-      completed: true,
-      completedAt: "2026-02-16T23:50:00Z",
-      project: "etsy-shop",
-      notes: "Comma-separated format for Anth's production software. All 12 books documented."
-    },
-    {
-      id: "image-scripts",
-      text: "✅ Built crop-to-square.bat image processing script",
-      owner: "Skippy",
-      priority: "medium",
-      completed: true,
-      completedAt: "2026-02-16T23:54:00Z",
+      completedAt: "2026-02-17T13:25:00Z",
       project: "pinterest-automation",
-      notes: "Joins crop-covers.bat and resize-for-pins.bat. Double-click batch script for Windows image processing."
+      notes: "Comprehensive policy covering GDPR, CCPA, Pinterest developer guidelines. Live at memorybridgebooks.com/privacy.html"
     }
   ],
   weather: {
     location: "St. John, NB",
-    summary: "Check tomorrow's weather"
+    summary: "Clear this morning, snow starting tonight (2cm expected)"
   },
   reminders: [
-    "✅ memorybridgebooks.com LIVE with About Margaret section",
-    "✅ All 12 books live on Etsy + Amazon",
-    "✅ Author Central page complete",
-    "⏳ Pinterest API approval pending (boards ready, automation built)",
-    "🔴 Trademark filing due by ~March 13 (30 days from domain registration)",
-    "Fix apex domain DNS (memorybridgebooks.com without www)"
+    "🔴 Pinterest API reapplication - use new privacy policy URL",
+    "📌 Manual pin posting starts TODAY (5-7/day)",
+    "📚 5 new books ready for Amazon → Etsy pipeline",
+    "🌐 Fix DNS apex domain issue in GoDaddy",
+    "📝 Reddit posts written and ready to deploy"
   ]
 }
 
