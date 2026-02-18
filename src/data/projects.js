@@ -228,28 +228,35 @@ export const projects = [
     id: 'pinterest-automation',
     name: 'Pinterest Pin Automation',
     category: 'factory',
-    progress: 85,
+    progress: 90,
     status: 'wip',
-    statusLabel: 'Reapplying for API',
-    description: 'Full Pinterest automation via official API. First application denied (bogus privacy policy link). Privacy policy now comprehensive and live. Reapplying today. Manual pin posting starts immediately (batch ready). Automation resumes once API approved.',
-    blockers: ['First API application denied - privacy policy issue (fixed)', 'Reapplication needed'],
+    statusLabel: 'Posting Active 📌',
+    description: 'Pinterest posting ACTIVE! Week 1 schedule: 40 pins planned (Feb 17-23). Currently: 3 posted, 15 scheduled through Thursday 8pm. API reapplication submitted. Manual posting continues while waiting for API approval. Comprehensive pin schedule with product, story, educational, and seasonal content.',
+    blockers: ['API reapplication pending (privacy policy fixed and resubmitted)'],
     nextActions: [
-      '🔴 Reapply for Pinterest API with proper privacy policy URL',
-      '🔴 Start manual pin posting TODAY (batch ready, 5-7/day)',
-      'Once approved: Get fresh access token',
-      'Test connection with queue system',
-      'Deploy automated posting'
+      '🔴 Create pin images for Friday-Sunday (22 remaining pins)',
+      '📌 Keep posting schedule on track (5-6 pins/day)',
+      '📊 Review Week 1 results Friday to optimize Week 2',
+      '⏳ Wait for API approval (automation resumes once approved)'
     ],
-    techStack: ['Python', 'Pinterest API v5', 'OAuth 2.0', 'Queue folder system', 'ImageMagick', 'Windows BAT scripts'],
-    lastWorked: '2026-02-17',
+    techStack: ['Pinterest Native Scheduler', 'ImageMagick', 'Windows BAT scripts', 'Python (API ready)', 'OAuth 2.0'],
+    lastWorked: '2026-02-18',
     file: 'pinterest-automation.md',
+    week1Schedule: {
+      totalPins: 40,
+      posted: 3,
+      scheduled: 15,
+      remaining: 22,
+      endDate: '2026-02-23',
+      lastScheduled: 'Thursday Feb 20 8pm'
+    },
     completedMilestones: [
       '✅ 10 Pinterest boards created (5 primary, 5 secondary)',
-      '✅ Image processing scripts built (crop-covers.bat, resize-for-pins.bat, crop-to-square.bat)',
-      '✅ Automation scripts written and tested',
-      '✅ Comprehensive privacy policy created',
-      '✅ Pin batch ready for manual posting',
-      '⏳ Reapplying for API approval'
+      '✅ Image processing scripts built + pinterest-resize-compress.bat',
+      '✅ Comprehensive 40-pin Week 1 schedule created',
+      '✅ Privacy policy fixed and API reapplied',
+      '✅ Manual posting ACTIVE (3 posted, 15 scheduled)',
+      '⏳ API approval pending'
     ]
   },
   {

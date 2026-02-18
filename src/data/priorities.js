@@ -58,13 +58,27 @@ export const priorities = {
       notes: "Need What's Inside bullet points (comma-separated format) for the 5 new books. Same format as whats-inside-bullets.md"
     },
     {
-      id: "start-posting-pins",
-      text: "🔴 Start posting Pinterest pins today (batch ready)",
+      id: "pinterest-posting-progress",
+      text: "📌 Pinterest posting in progress (3 posted, 15 scheduled through Thu 8pm)",
       owner: "Anth",
-      priority: "urgent",
+      priority: "high",
       completed: false,
       project: "pinterest-automation",
-      notes: "Pins built and ready. Post manually while waiting for API approval. Aim for 5-7 pins/day."
+      notes: "Week 1 schedule: 40 pins total. Currently: 3 posted, 15 more scheduled (through Feb 20 8pm). Need to create images for remaining 22 pins (Fri-Sun). Schedule saved: pinterest-week1-schedule.md",
+      nextActions: [
+        "Create pin images for Friday-Sunday (pins 25-40)",
+        "Schedule remaining 22 pins before Thursday 8pm",
+        "Review results Friday to plan Week 2 strategy"
+      ]
+    },
+    {
+      id: "pinterest-create-more-images",
+      text: "🎨 Create more Pinterest pin images (22 remaining for Week 1)",
+      owner: "Anth",
+      priority: "high",
+      completed: false,
+      project: "pinterest-automation",
+      notes: "Last scheduled pin posts Thursday Feb 20 8pm. Need images ready for Friday-Sunday posting (22 more pins). Reminder set for Wednesday evening."
     },
     {
       id: "reddit-first-post",
