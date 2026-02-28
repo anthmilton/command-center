@@ -2,114 +2,126 @@
 // This file is dynamically managed by the Command Center
 
 export const priorities = {
-  date: "2026-02-17",
+  date: "2026-02-28",
   briefDelivered: true,
   tasks: [
     {
-      id: "pinterest-reapply",
-      text: "🔴 URGENT: Reapply for Pinterest API with updated privacy policy",
+      id: "gumroad-setup",
+      text: "🚀 Set up Gumroad landing page for free guide",
       owner: "Anth",
       priority: "urgent",
       completed: false,
-      project: "pinterest-automation",
-      notes: "Privacy policy updated at memorybridgebooks.com/privacy.html. First application denied due to bogus privacy link. Reapply with proper URL.",
+      project: "margaret-video-funnel",
+      notes: "All copy written and ready to paste. Create product, upload free preview PDF (Chapters 1-3), configure email capture, test funnel. Target: launch today.",
       nextActions: [
-        "Go to Pinterest Developer Portal",
-        "Reapply for API access",
-        "Use privacy policy URL: https://memorybridgebooks.com/privacy.html",
-        "Wait for approval (typically 1-2 weeks)"
+        "Go to gumroad.com, create account",
+        "Create new product: 'Memory Bridge Guide - Free Preview'",
+        "Set price $0 (email required)",
+        "Upload free preview PDF",
+        "Paste landing page copy (provided by Skippy)",
+        "Test download flow",
+        "Get Gumroad link for Pinterest pins"
       ]
     },
     {
-      id: "dns-apex-fix",
-      text: "Fix GoDaddy DNS settings (apex domain without www)",
-      owner: "Anth",
-      priority: "high",
-      completed: false,
-      project: "memory-bridge-branding",
-      notes: "www.memorybridgebooks.com works, but memorybridgebooks.com doesn't. Need to add A records: 76.76.21.21 and 76.76.21.98"
-    },
-    {
-      id: "amazon-5-new-books",
-      text: "🔴 Finish posting 5 remaining books to Amazon KDP",
-      owner: "Anth",
-      priority: "urgent",
-      completed: false,
-      project: "kdp-books",
-      notes: "5 new books compiled with covers, ready to upload. Books currently at 12 live, will be 17 after this."
-    },
-    {
-      id: "etsy-5-new-books",
-      text: "Post 5 new books to Etsy after Amazon approval",
-      owner: "Anth",
-      priority: "high",
-      completed: false,
-      blockedBy: "amazon-5-new-books",
-      project: "etsy-shop",
-      notes: "Wait for Amazon approval, then create Etsy listings for same 5 books"
-    },
-    {
-      id: "etsy-content-5-books",
-      text: "Create Etsy listing content for 5 new books",
-      owner: "Skippy",
-      priority: "high",
-      completed: false,
-      project: "etsy-shop",
-      notes: "Need What's Inside bullet points (comma-separated format) for the 5 new books. Same format as whats-inside-bullets.md"
-    },
-    {
-      id: "pinterest-posting-progress",
-      text: "📌 Pinterest posting in progress (3 posted, 15 scheduled through Thu 8pm)",
+      id: "pinterest-video-demo",
+      text: "🎥 Record Pinterest API video demo",
       owner: "Anth",
       priority: "high",
       completed: false,
       project: "pinterest-automation",
-      notes: "Week 1 schedule: 40 pins total. Currently: 3 posted, 15 more scheduled (through Feb 20 8pm). Need to create images for remaining 22 pins (Fri-Sun). Schedule saved: pinterest-week1-schedule.md",
+      notes: "Automation app is working in sandbox. Need to record video showing OAuth flow + pin creation for Standard Access application. 2-3 minutes total.",
       nextActions: [
-        "Create pin images for Friday-Sunday (pins 25-40)",
-        "Schedule remaining 22 pins before Thursday 8pm",
-        "Review results Friday to plan Week 2 strategy"
+        "Run: npm run setup (show OAuth flow)",
+        "Run: npm run post-pin (show pin creation)",
+        "Check Pinterest for posted pin",
+        "Record all 3 steps with screen capture",
+        "Upload video to Pinterest application"
       ]
     },
     {
-      id: "pinterest-create-more-images",
-      text: "🎨 Create more Pinterest pin images (22 remaining for Week 1)",
+      id: "pinterest-standard-access",
+      text: "📤 Submit Pinterest Standard Access application",
+      owner: "Anth",
+      priority: "high",
+      completed: false,
+      blockedBy: "pinterest-video-demo",
+      project: "pinterest-automation",
+      notes: "Once video is recorded, submit application. Typical approval: 1-2 weeks. Full API automation resumes once approved."
+    },
+    {
+      id: "week3-campaign-planning",
+      text: "📋 Plan Pinterest Week 3 campaign",
       owner: "Anth",
       priority: "high",
       completed: false,
       project: "pinterest-automation",
-      notes: "Last scheduled pin posts Thursday Feb 20 8pm. Need images ready for Friday-Sunday posting (22 more pins). Reminder set for Wednesday evening."
+      notes: "Week 2 pins run out Sunday afternoon. Need Week 3 ready. Use Opus (Claude monthly) to analyze Week 1-2 analytics and generate Week 3 strategy.",
+      nextActions: [
+        "Pull Week 1-2 Pinterest analytics",
+        "Feed to Claude Monthly (Opus + extended thinking)",
+        "Get comprehensive Week 3 campaign plan",
+        "Review with Skippy, refine",
+        "Skippy: Test pin image generation with Gemini Imagen API (5-6 test batch)",
+        "If quality good, batch-generate Week 3 pins"
+      ]
     },
     {
-      id: "reddit-first-post",
-      text: "Deploy first Reddit post (5 posts ready)",
+      id: "free-guide-extraction",
+      text: "Extract free preview PDF (Chapters 1-3 + samples)",
+      owner: "Together",
+      priority: "high",
+      completed: false,
+      project: "margaret-video-funnel",
+      notes: "Need to extract first 3 chapters from full guide PDF, add 3 sample coloring pages, create cover page. This is what goes on Gumroad for email capture."
+    },
+    {
+      id: "pinterest-video-upload",
+      text: "📌 Upload 3 Margaret videos to Pinterest",
       owner: "Anth",
       priority: "medium",
       completed: false,
-      project: "marketing",
-      notes: "reddit-posts.md has 5 complete posts. Start with r/dementia emotional story. Best times: 8-10 AM ET or 6-8 PM ET."
+      blockedBy: "gumroad-setup",
+      project: "margaret-video-funnel",
+      notes: "Once Gumroad is live and you have the link, upload Margaret videos as Pinterest video pins. Use pin descriptions provided by Skippy.",
+      nextActions: [
+        "Upload Video 1 (For Caregivers) to Memory Care Activities board",
+        "Upload Video 2 (How Therapy Works) to Caregiver Resources board",
+        "Upload Video 3 (Women's Collection) to Memory Care for Women board",
+        "All pin descriptions include Gumroad link"
+      ]
     },
     {
-      id: "privacy-policy-updated",
-      text: "✅ Updated privacy policy for Pinterest API compliance",
+      id: "etsy-api-approval-check",
+      text: "⏳ Check Etsy API key approval status",
+      owner: "Anth",
+      priority: "medium",
+      completed: false,
+      project: "etsy-shop",
+      notes: "Applied for Etsy API key. Typical approval: hours to 1-2 days. Check email for approval notification."
+    },
+    {
+      id: "command-center-update",
+      text: "✅ Update Command Center with Feb 28 status",
       owner: "Skippy",
       priority: "urgent",
       completed: true,
-      completedAt: "2026-02-17T13:25:00Z",
-      project: "pinterest-automation",
-      notes: "Comprehensive policy covering GDPR, CCPA, Pinterest developer guidelines. Live at memorybridgebooks.com/privacy.html"
+      completedAt: "2026-02-28T19:30:00Z",
+      project: "command-center",
+      notes: "Updated all project statuses, added Margaret Whitmore Video Funnel project, created memory documentation, updated MEMORY.md"
     }
   ],
   weather: {
     location: "St. John, NB",
-    summary: "Clear this morning, snow starting tonight (2cm expected)"
+    summary: "High +5°C today, snow 2-4cm starting tonight"
   },
   reminders: [
-    "🔴 Pinterest API reapplication - use new privacy policy URL",
-    "📌 Manual pin posting starts TODAY (5-7/day)",
-    "📚 5 new books ready for Amazon → Etsy pipeline",
-    "🌐 Fix DNS apex domain issue in GoDaddy",
-    "📝 Reddit posts written and ready to deploy"
+    "🚀 Gumroad launch priority - all copy ready",
+    "🎥 Pinterest video demo ready to record",
+    "📋 Week 3 campaign planning needed (Week 2 ends Sunday)",
+    "⏳ Etsy API key approval pending",
+    "📊 17 books live on Amazon + Etsy",
+    "🍺 Margaret videos ready, funnel strategy complete"
   ]
 }
 

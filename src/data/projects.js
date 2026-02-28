@@ -57,42 +57,37 @@ export const projects = [
     id: 'sales-crm',
     name: 'CRM App',
     category: 'business',
-    progress: 95,
+    progress: 98,
     status: 'almost',
-    statusLabel: '95%',
-    description: 'Lead capture app for the sign shop sales team. Web dashboard + mobile app.',
-    blockers: ['Unknown bugs need to be identified'],
+    statusLabel: '98% - Bugs Fixed',
+    description: 'Lead capture app for the sign shop sales team. Web dashboard + mobile app. Bugs fixed, working in field with more regular use.',
+    blockers: [],
     nextActions: [
-      'Identify and document the specific bugs',
-      'Fix bugs',
+      'Monitor field usage for any remaining issues',
+      'Consider improvements and adjustments based on team feedback',
       'Final testing',
-      'Deploy/distribute to sales team'
+      'Full deployment to sales team'
     ],
     techStack: ['React Native', 'Expo', 'Firebase'],
-    lastWorked: '2025-01-31',
+    lastWorked: '2026-02-28',
     file: 'sales-crm.md'
   },
   {
     id: 'screen-shields',
     name: 'Screen Shields',
     category: 'fishing',
-    progress: 60,
+    progress: 85,
     status: 'wip',
-    statusLabel: 'Testing',
-    description: 'Protective screens for fishfinder graphs. Amazon launch planned.',
-    blockers: [
-      'Need to finalize brand identity',
-      'Packaging design',
-      'Marketing strategy'
-    ],
+    statusLabel: 'Nearly Ready',
+    description: 'Protective screens for fishfinder graphs. Amazon launch planned. Nearly ready - few more sizes to adjust and list.',
+    blockers: [],
     nextActions: [
-      'Decide on final brand name',
-      'Design logo',
-      'Create packaging mockups',
-      'Write Amazon listing copy'
+      'Adjust and finalize remaining sizes',
+      'Create Amazon listings',
+      'Launch on Amazon (target: next 2 weeks)'
     ],
     techStack: [],
-    lastWorked: null,
+    lastWorked: '2026-02-28',
     file: 'screen-shields.md'
   },
   {
@@ -157,19 +152,19 @@ export const projects = [
     id: 'ai-image-studio',
     name: 'AI Image Studio',
     category: 'factory',
-    progress: 85,
-    status: 'almost',
-    statusLabel: 'Secured 🔒',
-    description: 'Full AI image generation platform with multi-provider support (Gemini, OpenAI, Stability), KDP book cover system, drag-and-drop text overlay editor, and batch production studio.',
-    blockers: ['Could use documentation/onboarding'],
+    progress: 100,
+    status: 'complete',
+    statusLabel: 'Production Ready ✓',
+    description: 'Full AI image generation platform with multi-provider support (Gemini, OpenAI, Stability), KDP book cover system, drag-and-drop text overlay editor, and batch production studio. Fully functional - created every Memory Bridge book. Some unused features broken but core workflow works perfectly.',
+    blockers: [],
     nextActions: [
-      'Clean up versioned files (consolidate to single version)',
-      'Add user documentation / tutorial',
-      'Consider web version for broader access',
-      'Marketing / product positioning'
+      'Skippy: Review codebase and workflow to understand production capabilities',
+      'Document current production workflow for reference',
+      'Improvements and updates when time allows',
+      'Consider cleanup of unused/broken features'
     ],
     techStack: ['Python', 'CustomTkinter', 'PIL/Pillow', 'Google Gemini API', 'OpenAI API', 'Stability AI API', 'PyInstaller'],
-    lastWorked: '2026-02-01',
+    lastWorked: '2026-02-28',
     file: 'ai-image-studio.md'
   },
   {
@@ -197,94 +192,156 @@ export const projects = [
     category: 'business',
     progress: 100,
     status: 'live',
-    statusLabel: '12 Live + 5 Ready',
-    description: 'Memory care coloring books by Margaret Whitmore. 12 BOOKS LIVE on Amazon, 5 NEW BOOKS ready to upload (compiled with covers). Focus: MEMORY CARE EXCLUSIVELY for Pinterest/Etsy. Working Life Collection = competitive differentiator ("Activities for Men with Dementia").',
+    statusLabel: '17 Books Live ✓',
+    description: 'Memory care coloring books by Margaret Whitmore. ALL 17 BOOKS LIVE on Amazon + Etsy. Complete catalog: 3 classic 1950s + 9 working life (men) + 5 women\'s working life + 3 fishing. Focus: MEMORY CARE EXCLUSIVELY. Working Life Collection = competitive differentiator ("Activities for Men with Dementia").',
     blockers: [],
     nextActions: [
-      '🔴 Upload 5 new books to Amazon KDP',
-      'Wait for Pinterest API reapplication approval',
-      'Start manual pin posting (5-7/day) while waiting for API',
-      'Monitor Etsy sales data (all 12 listings live)',
-      'Create "Working Life Collection" bundle on Etsy after new books live'
+      'Monitor sales performance across all 17 titles',
+      'Track Pinterest → Etsy → Amazon conversion funnel',
+      'Consider next series expansion (see expansion roadmap)',
+      'Build bundles on Etsy (Working Life, Women\'s, Complete Set)',
+      'Wait for some traction before expanding further into KDP'
     ],
     techStack: ['AI Image Studio', 'KDP', 'Pinterest', 'Etsy', 'books.json'],
-    lastWorked: '2026-02-17',
+    lastWorked: '2026-02-28',
     file: 'kdp-books.md',
     catalog: {
-      live: 12,
-      pending: 5,
+      live: 17,
+      pending: 0,
       total: 17,
       breakdown: {
         'Classic Memory Care (1950s)': 3,
-        'Occupational - Vintage (1950s)': 3,
-        'Occupational - Boomer (1970s-80s)': 3,
-        'Fishing (Bold & Easy)': 3,
-        'New Books (Ready to Launch)': 5
+        'Working Life - Men (Vintage 1950s)': 3,
+        'Working Life - Men (Boomer 1970s-80s)': 3,
+        'Working Life - Women (Boomer 1970s-80s)': 5,
+        'Fishing (Bold & Easy)': 3
       },
-      recentLaunch: '5 new books compiled and ready for Amazon upload today.'
+      recentLaunch: '5 women\'s working life books launched Feb 26, 2026'
     }
   },
   {
     id: 'pinterest-automation',
     name: 'Pinterest Pin Automation',
     category: 'factory',
-    progress: 90,
+    progress: 80,
     status: 'wip',
-    statusLabel: 'Posting Active 📌',
-    description: 'Pinterest posting ACTIVE! Week 1 schedule: 40 pins planned (Feb 17-23). Currently: 3 posted, 15 scheduled through Thursday 8pm. API reapplication submitted. Manual posting continues while waiting for API approval. Comprehensive pin schedule with product, story, educational, and seasonal content.',
-    blockers: ['API reapplication pending (privacy policy fixed and resubmitted)'],
+    statusLabel: 'Week 2 Complete, API Video Ready',
+    description: 'Pinterest Week 2 COMPLETE - all pins posted/scheduled through Sunday afternoon. Week 3 campaign planning needed. Node.js automation app BUILT and TESTED in sandbox mode. Video demo ready to record. Awaiting Standard Access approval (1-2 weeks after video submission).',
+    blockers: ['Waiting for Standard Access approval - need to record and submit video demo'],
     nextActions: [
-      '🔴 Create pin images for Friday-Sunday (22 remaining pins)',
-      '📌 Keep posting schedule on track (5-6 pins/day)',
-      '📊 Review Week 1 results Friday to optimize Week 2',
-      '⏳ Wait for API approval (automation resumes once approved)'
+      '🎥 Record Pinterest API video demo (OAuth + pin creation)',
+      '📤 Submit Standard Access application with video',
+      '⏳ Wait for Pinterest approval (1-2 weeks)',
+      '📋 Plan Week 3 campaign (Opus generates strategy from Week 1-2 analytics)',
+      '🎨 Skippy: Automate pin image generation with Gemini Imagen API',
+      '📌 Continue manual posting for Week 3 while waiting'
     ],
-    techStack: ['Pinterest Native Scheduler', 'ImageMagick', 'Windows BAT scripts', 'Python (API ready)', 'OAuth 2.0'],
-    lastWorked: '2026-02-18',
+    techStack: ['Node.js', 'Pinterest API v5', 'OAuth 2.0 PKCE', 'Sandbox Mode', 'Manual Scheduler', 'Gemini Imagen (planned)'],
+    lastWorked: '2026-02-28',
     file: 'pinterest-automation.md',
-    week1Schedule: {
-      totalPins: 40,
-      posted: 3,
-      scheduled: 15,
-      remaining: 22,
-      endDate: '2026-02-23',
-      lastScheduled: 'Thursday Feb 20 8pm'
+    automationStatus: {
+      appBuilt: true,
+      oauthWorking: true,
+      pinCreationWorking: true,
+      sandboxTested: true,
+      videoReady: true,
+      standardAccessApplied: false
     },
     completedMilestones: [
-      '✅ 10 Pinterest boards created (5 primary, 5 secondary)',
-      '✅ Image processing scripts built + pinterest-resize-compress.bat',
-      '✅ Comprehensive 40-pin Week 1 schedule created',
-      '✅ Privacy policy fixed and API reapplied',
-      '✅ Manual posting ACTIVE (3 posted, 15 scheduled)',
-      '⏳ API approval pending'
+      '✅ 10 Pinterest boards created',
+      '✅ Week 1 complete (40 pins)',
+      '✅ Week 2 complete (all pins posted/scheduled)',
+      '✅ Node.js automation app built (Claude Code)',
+      '✅ OAuth flow working (sandbox)',
+      '✅ Pin posting working (sandbox)',
+      '✅ Queue management working',
+      '✅ Video demo ready to record',
+      '⏳ Standard Access application pending'
     ]
   },
   {
     id: 'etsy-shop',
     name: 'Memory Bridge Books - Etsy Shop',
     category: 'business',
-    progress: 90,
+    progress: 95,
     status: 'live',
-    statusLabel: '12 Listings Live ✓',
-    description: 'Etsy shop LIVE at etsy.com/shop/MemoryBridgeBooks. All 12 Memory Bridge Books listed as digital downloads. Individual PDFs with What\'s Inside graphics, full descriptions, SEO tags. High margin digital sales + Amazon physical book cross-promotion funnel active.',
-    blockers: [],
+    statusLabel: '17 Listings Live + Video ✓',
+    description: 'Etsy shop LIVE at etsy.com/shop/MemoryBridgeBooks. All 17 Memory Bridge Books listed as digital downloads with multiple photos. Silent product video created and uploaded. API key application submitted (waiting approval). High margin digital sales (93%) + Amazon cross-promotion funnel.',
+    blockers: ['Etsy API key approval pending'],
     nextActions: [
-      'Monitor sales data and conversion rates',
-      'Create themed bundles (1950s Collection, Working Life Collection, Complete Set)',
-      'Add more listing photos (currently 5-10 per listing)',
-      'Set up Etsy Developer Account for API automation (Phase 2)',
-      'Build Etsy listing automation script (future)',
-      'Track Pinterest → Etsy conversion once pins go live'
+      '⏳ Wait for Etsy API key approval (1-2 days typical)',
+      '🤖 Test Etsy API integration once approved',
+      '📦 Create themed bundles (1950s Collection, Working Life Collections, Complete Set)',
+      '📊 Monitor sales data and conversion rates',
+      '📌 Track Pinterest → Etsy conversion funnel',
+      '🎥 Create more silent product videos for remaining listings'
     ],
-    techStack: ['Etsy Manual Listings', 'Digital PDFs', 'books.json integration', 'What\'s Inside graphics'],
-    lastWorked: '2026-02-17',
+    techStack: ['Etsy Manual Listings', 'Digital PDFs', 'books.json', 'Silent Video (15sec)', 'Etsy API (pending)'],
+    lastWorked: '2026-02-28',
     file: 'etsy-shop.md',
     liveListings: {
-      individual: 12,
+      individual: 17,
       bundles: 0,
-      totalRevenue: 'TBD',
-      launched: '2026-02-17'
+      videosCreated: 1,
+      totalRevenue: 'TBD - tracking begins',
+      launched: '2026-02-17',
+      expanded: '2026-02-26'
     }
+  },
+  {
+    id: 'margaret-video-funnel',
+    name: 'Margaret Whitmore Video Funnel',
+    category: 'factory',
+    progress: 65,
+    status: 'wip',
+    statusLabel: 'Videos Done, Gumroad Next',
+    description: 'Multi-platform video + email funnel. Margaret Whitmore (AI avatar) explains therapeutic approach → drives to free guide download (email capture) → 14-day nurture sequence → product sales. Not selling coloring books - selling a therapeutic system. Two-channel strategy: silent Etsy product videos + Margaret talking videos for Pinterest/YouTube/Gumroad.',
+    blockers: [],
+    nextActions: [
+      '🚀 Set up Gumroad landing page (copy ready, today)',
+      '📤 Upload 3 Margaret videos to Pinterest as video pins',
+      '✅ Test full funnel flow (pin → Gumroad → email)',
+      '📧 Write 14-day email nurture sequence',
+      '🎬 Film remaining 5 "Memory Bridge Minute" videos (future)',
+      '🎥 Create more silent Etsy product videos (batch production)'
+    ],
+    techStack: ['HeyGen (AI avatar)', 'Gumroad (email capture)', 'Pinterest Video Pins', 'YouTube Shorts', 'CapCut', 'Email automation'],
+    lastWorked: '2026-02-28',
+    file: 'margaret-whitmore-video-funnel.md',
+    videoAssets: {
+      margaretAvatarVideos: 3,
+      etsySilentVideos: 1,
+      plannedAdditional: 5,
+      scriptsComplete: true,
+      avatarCreated: true
+    },
+    funnelComponents: {
+      videos: 'Complete (3 Margaret + 1 Etsy)',
+      gumroad: 'Copy written, setup in progress',
+      freeGuide: 'PDF needs extraction (Chapters 1-3)',
+      emailSequence: 'Outlined, needs writing',
+      pinterestPins: 'Ready to upload',
+      youtubeSh shorts: 'Optional expansion'
+    },
+    completedMilestones: [
+      '✅ Margaret Whitmore avatar created (multiple outfits/settings)',
+      '✅ 3 Margaret videos filmed (For Caregivers, How Therapy Works, Women\'s Collection)',
+      '✅ 1 silent Etsy product video created and uploaded',
+      '✅ Complete funnel strategy documented',
+      '✅ Gumroad landing page copy written',
+      '✅ Pinterest pin descriptions written',
+      '✅ Email sequence outlined',
+      '⏳ Gumroad setup in progress',
+      '⏳ Free guide preview extraction needed'
+    ],
+    strategicValue: [
+      'Email list ownership (platform independence)',
+      'Brand authority (Margaret = THE voice in memory care coloring)',
+      'Product positioning (therapeutic system, not coloring books)',
+      'Buyer education (reduces purchase anxiety)',
+      'Content multiplier (each video = multiple Pinterest pins)',
+      'Launch engine (email list accelerates new releases)'
+    ]
   },
   {
     id: 'api-cost-tracker',
