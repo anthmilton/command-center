@@ -321,7 +321,7 @@ export const projects = [
       freeGuide: 'PDF needs extraction (Chapters 1-3)',
       emailSequence: 'Outlined, needs writing',
       pinterestPins: 'Ready to upload',
-      youtubeSh shorts: 'Optional expansion'
+      youtubeShorts: 'Optional expansion'
     },
     completedMilestones: [
       '✅ Margaret Whitmore avatar created (multiple outfits/settings)',
