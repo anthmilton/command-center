@@ -2,126 +2,159 @@
 // This file is dynamically managed by the Command Center
 
 export const priorities = {
-  date: "2026-02-28",
+  date: "2026-03-10",
   briefDelivered: true,
   tasks: [
     {
-      id: "gumroad-setup",
-      text: "🚀 Set up Gumroad landing page for free guide",
-      owner: "Anth",
+      id: "bundle-images-her-working-life",
+      text: "🎨 Create Her Working Life Collection bundle images",
+      owner: "Skippy",
       priority: "urgent",
       completed: false,
-      project: "margaret-video-funnel",
-      notes: "All copy written and ready to paste. Create product, upload free preview PDF (Chapters 1-3), configure email capture, test funnel. Target: launch today.",
+      project: "bundle-listing-images",
+      notes: "1/4 bundles complete (The 1950s Collection done). Her Working Life Collection is NEXT - validated by Beth's $29.97 Etsy order (all 3 books from this collection). 10 images needed: hero shot, spread, 3x interior samples, infographic, colored sample, size reference, gift shot, collection context.",
       nextActions: [
-        "Go to gumroad.com, create account",
-        "Create new product: 'Memory Bridge Guide - Free Preview'",
-        "Set price $0 (email required)",
-        "Upload free preview PDF",
-        "Paste landing page copy (provided by Skippy)",
-        "Test download flow",
-        "Get Gumroad link for Pinterest pins"
+        "Use same 10-slot workflow as 1950s Collection",
+        "Books: Beauty Shop, Sewing/Quilting, Home Cook, plus 3 more from women's working life",
+        "Generate via nano-banana-pro skill",
+        "Deliver to Anth when complete"
       ]
     },
     {
-      id: "pinterest-video-demo",
-      text: "🎥 Record Pinterest API video demo",
-      owner: "Anth",
-      priority: "high",
+      id: "time-tracking-functional",
+      text: "⏱️ Get Time Tracking App functional",
+      owner: "Together",
+      priority: "urgent",
       completed: false,
-      project: "pinterest-automation",
-      notes: "Automation app is working in sandbox. Need to record video showing OAuth flow + pin creation for Standard Access application. 2-3 minutes total.",
+      project: "time-tracker",
+      notes: "Built but not functional. Target: working by END OF THIS WEEK for personal testing. Potential product if successful.",
       nextActions: [
-        "Run: npm run setup (show OAuth flow)",
-        "Run: npm run post-pin (show pin creation)",
-        "Check Pinterest for posted pin",
-        "Record all 3 steps with screen capture",
-        "Upload video to Pinterest application"
+        "Review existing code and audit state",
+        "Document what works vs broken",
+        "Fix critical bugs",
+        "Deploy for personal testing"
       ]
     },
     {
-      id: "pinterest-standard-access",
-      text: "📤 Submit Pinterest Standard Access application",
-      owner: "Anth",
-      priority: "high",
-      completed: false,
-      blockedBy: "pinterest-video-demo",
-      project: "pinterest-automation",
-      notes: "Once video is recorded, submit application. Typical approval: 1-2 weeks. Full API automation resumes once approved."
-    },
-    {
-      id: "week3-campaign-planning",
-      text: "📋 Plan Pinterest Week 3 campaign",
-      owner: "Anth",
-      priority: "high",
-      completed: false,
-      project: "pinterest-automation",
-      notes: "Week 2 pins run out Sunday afternoon. Need Week 3 ready. Use Opus (Claude monthly) to analyze Week 1-2 analytics and generate Week 3 strategy.",
-      nextActions: [
-        "Pull Week 1-2 Pinterest analytics",
-        "Feed to Claude Monthly (Opus + extended thinking)",
-        "Get comprehensive Week 3 campaign plan",
-        "Review with Skippy, refine",
-        "Skippy: Test pin image generation with Gemini Imagen API (5-6 test batch)",
-        "If quality good, batch-generate Week 3 pins"
-      ]
-    },
-    {
-      id: "free-guide-extraction",
-      text: "Extract free preview PDF (Chapters 1-3 + samples)",
+      id: "fishing-log-4week-sprint",
+      text: "🎣 Fishing Log App - Start 4-week sprint",
       owner: "Together",
       priority: "high",
       completed: false,
-      project: "margaret-video-funnel",
-      notes: "Need to extract first 3 chapters from full guide PDF, add 3 sample coloring pages, create cover page. This is what goes on Gumroad for email capture."
-    },
-    {
-      id: "pinterest-video-upload",
-      text: "📌 Upload 3 Margaret videos to Pinterest",
-      owner: "Anth",
-      priority: "medium",
-      completed: false,
-      blockedBy: "gumroad-setup",
-      project: "margaret-video-funnel",
-      notes: "Once Gumroad is live and you have the link, upload Margaret videos as Pinterest video pins. Use pin descriptions provided by Skippy.",
+      project: "fishing-log",
+      notes: "Season starting NOW. Private tournament prep tool (heat maps, catch tracking, pattern analysis). Functional MVP by ~April 10.",
       nextActions: [
-        "Upload Video 1 (For Caregivers) to Memory Care Activities board",
-        "Upload Video 2 (How Therapy Works) to Caregiver Resources board",
-        "Upload Video 3 (Women's Collection) to Memory Care for Women board",
-        "All pin descriptions include Gumroad link"
+        "Document detailed feature requirements",
+        "Design database schema (catches, locations, conditions, weather)",
+        "Build core tracking MVP",
+        "Deploy for personal tournament testing"
       ]
     },
     {
-      id: "etsy-api-approval-check",
-      text: "⏳ Check Etsy API key approval status",
+      id: "screen-shields-launch-prep",
+      text: "🛡️ Screen Shields - Finalize for Amazon launch",
+      owner: "Anth",
+      priority: "high",
+      completed: false,
+      project: "screen-shields",
+      notes: "Testing complete. Fishing/boating season starting - 1-2 week launch window. Needs: marketing materials, logos, packaging.",
+      nextActions: [
+        "Design logos and branding",
+        "Finalize packaging design",
+        "Create Amazon product listings",
+        "Launch on Amazon"
+      ]
+    },
+    {
+      id: "good-times-collection-site-update",
+      text: "📚 Update website when Good Times Collection goes live",
+      owner: "Skippy",
+      priority: "high",
+      completed: false,
+      blockedBy: "Amazon approval pending",
+      project: "website-maintenance",
+      notes: "5 books under Amazon review (Boomer leisure activities). When approved, IMMEDIATELY update memorycarebooks.com: add 5 books to books.json, upload covers, rebuild Hugo, deploy to Vercel.",
+      nextActions: [
+        "Wait for Anth's notification that books are live",
+        "Get ASIN links + cover images",
+        "Update books.json with all 5 books",
+        "Add covers to /static/images/covers/",
+        "Rebuild: hugo",
+        "Deploy: vercel --prod",
+        "Confirm with Anth"
+      ]
+    },
+    {
+      id: "etsy-api-follow-up",
+      text: "📧 Follow up with Etsy on API approval",
       owner: "Anth",
       priority: "medium",
       completed: false,
       project: "etsy-shop",
-      notes: "Applied for Etsy API key. Typical approval: hours to 1-2 days. Check email for approval notification."
+      notes: "API app pending approval 3+ weeks. Tested API key - returned 'not active' error. Need to contact Etsy support or consider reapplying.",
+      nextActions: [
+        "Contact Etsy support for status update",
+        "If rejected, reapply with new app submission",
+        "Manual Etsy management working fine in meantime"
+      ]
     },
     {
-      id: "command-center-update",
-      text: "✅ Update Command Center with Feb 28 status",
+      id: "bundle-listing-complete",
+      text: "📦 Complete all 4 bundle image sets",
       owner: "Skippy",
-      priority: "urgent",
-      completed: true,
-      completedAt: "2026-02-28T19:30:00Z",
-      project: "command-center",
-      notes: "Updated all project statuses, added Margaret Whitmore Video Funnel project, created memory documentation, updated MEMORY.md"
+      priority: "medium",
+      completed: false,
+      project: "bundle-listing-images",
+      notes: "After Her Working Life Collection, complete His Working Life and Fisherman's Collection. Then list ALL bundles on Gumroad + Etsy.",
+      nextActions: [
+        "Complete Her Working Life (next)",
+        "Complete His Working Life",
+        "Complete The Fisherman's Collection",
+        "Anth lists all 4 bundles on Gumroad",
+        "Anth lists all 4 bundles on Etsy"
+      ]
+    },
+    {
+      id: "hit-100-sales-threshold",
+      text: "💰 Hit $100 Gumroad sales threshold",
+      owner: "Together",
+      priority: "medium",
+      completed: false,
+      project: "margaret-video-funnel",
+      notes: "Need $100 in sales to unlock Gumroad email automation (14-day sequence ready to deploy). Currently: 17 individual books + free guide live, bundles pending.",
+      nextActions: [
+        "List all 4 bundles (drives bundle sales)",
+        "Pinterest campaign drives traffic to Gumroad",
+        "Monitor sales progress toward $100"
+      ]
+    },
+    {
+      id: "pinterest-week4-monitor",
+      text: "📌 Monitor Pinterest Week 4 campaign",
+      owner: "Skippy",
+      priority: "low",
+      completed: false,
+      project: "pinterest-automation",
+      notes: "Week 4 running perfectly (12/40 posted, 0 failures). Auto-pilot through March 15. Just monitor for errors.",
+      nextActions: [
+        "Let automation run",
+        "Check for any posting failures (none so far)",
+        "Prepare Week 5 campaign planning"
+      ]
     }
   ],
   weather: {
     location: "St. John, NB",
-    summary: "High +5°C today, snow 2-4cm starting tonight"
+    summary: "Early spring - fishing season starting"
   },
   reminders: [
-    "🚀 Gumroad launch priority - all copy ready",
-    "🎥 Pinterest video demo ready to record",
-    "📋 Week 3 campaign planning needed (Week 2 ends Sunday)",
-    "⏳ Etsy API key approval pending",
-    "📊 17 books live on Amazon + Etsy",
-    "🍺 Margaret videos ready, funnel strategy complete"
+    "🎉 FIRST ETSY SALE! March 9 - $29.97 (validates Her Working Life bundle)",
+    "📊 Sales momentum: 5 books sold this week (2 Amazon + 3 Etsy)",
+    "🎣 Fishing season starting - Screen Shields + Fishing Log both urgent",
+    "📚 Good Times Collection (5 books) under Amazon review - update site when live",
+    "🛍️ Bundles validated - Her Working Life Collection is priority #1",
+    "💌 Email automation blocked until $100 Gumroad sales (bundles will help)",
+    "🍺 Command Center + Website Maintenance now documented as skills"
   ]
 }
 
@@ -140,6 +173,7 @@ export const addPriority = (task) => {
     owner: task.owner || "Anth",
     priority: task.priority || "medium",
     completed: false,
-    project: task.project
+    project: task.project,
+    notes: task.notes || ""
   })
 }
