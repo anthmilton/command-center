@@ -138,16 +138,16 @@ export const projects = [
     progress: 100,
     status: 'live',
     statusLabel: '17 Live + 5 Review',
-    description: 'Therapeutic memory care coloring books by Margaret Whitmore. 17 LIVE on Amazon/Etsy/Gumroad. 5 under Amazon review (Good Times Collection → 22 total). First Etsy sale March 9! Pinterest Week 4 driving traffic.',
+    description: 'Therapeutic memory care coloring books by Margaret Whitmore. 17 LIVE on Amazon/Etsy/Gumroad. 5 under Amazon review (Good Times Collection → 22 total). Etsy sales: $56+, 6 orders. Pinterest + GA4 + UTM tracking active.',
     blockers: [],
     nextActions: [
       'Update website when Good Times Collection approved',
-      'Complete bundle listing images (1/4 done)',
-      'List all 4 bundles on Gumroad + Etsy',
-      'Monitor sales and Pinterest conversion'
+      'Complete Fisherman\'s Collection bundle images (3/4 done)',
+      'Anth assembles bundle PDFs',
+      'List all 4 bundles on Gumroad + Etsy'
     ],
-    techStack: ['AI Image Studio', 'Coloring Compiler', 'Gemini Imagen 3', 'nano-banana-pro'],
-    lastWorked: '2026-03-10',
+    techStack: ['AI Image Studio', 'Coloring Compiler', 'Gemini Imagen 3', 'nano-banana-pro', 'GA4 Analytics'],
+    lastWorked: '2026-04-20',
     file: 'memory-bridge-books.md'
   },
 
@@ -243,19 +243,19 @@ export const projects = [
     id: 'bundle-listing-images',
     name: 'Bundle Listing Images',
     category: 'skills',
-    progress: 25,
-    status: 'wip',
-    statusLabel: '1/4 Complete',
-    description: '10-slot Etsy listing image system for book bundles. Hero shots, spreads, interior samples, infographics, gift shots, context. The 1950s Collection complete (10 images delivered). 3 bundles remaining.',
+    progress: 75,
+    status: 'almost',
+    statusLabel: '3/4 Complete',
+    description: '10-slot Etsy listing image system for book bundles. Hero shots, spreads, interior samples, infographics, gift shots, context. 3/4 bundles complete: 1950s ✅, Her Working Life ✅, His Working Life ✅. Only Fisherman\'s Collection remaining.',
     blockers: [],
     nextActions: [
-      'Create Her Working Life Collection images (next)',
-      'Create His Working Life Collection images',
-      'Create The Fisherman\'s Collection images',
-      'List all bundles on Gumroad + Etsy when complete'
+      'Create The Fisherman\'s Collection images (last one)',
+      'Anth assembles bundle PDFs (32 books total)',
+      'Upload PDFs to Gumroad',
+      'List all 4 bundles on Gumroad + Etsy'
     ],
     techStack: ['nano-banana-pro (Gemini Imagen 3)', 'ImageMagick'],
-    lastWorked: '2026-03-09',
+    lastWorked: '2026-04-20',
     file: '/home/node/.openclaw/workspace/skills/bundle-listing-images/SKILL.md'
   },
   {
@@ -264,16 +264,16 @@ export const projects = [
     category: 'skills',
     progress: 100,
     status: 'live',
-    statusLabel: 'Week 4 Running',
-    description: 'Fully automated Pinterest marketing. Receives weekly campaign from Opus → builds 40-pin queue → generates images via nano-banana → posts via cron every 2 hours. Week 4: 12/40 posted, 0 failures. Three-tier link strategy active.',
+    statusLabel: 'Week 7 Complete',
+    description: 'Fully automated Pinterest marketing. Receives weekly campaign from Opus → builds 40-pin queue → generates images via nano-banana → posts via cron every 2 hours. Week 7 complete (40/40 posted, 0 failures). UTM tracking active via GA4.',
     blockers: [],
     nextActions: [
-      'Monitor Week 4 campaign through March 15',
-      'Plan Week 5 campaign',
-      'Track Pinterest → Etsy → Amazon conversion'
+      'Request Week 8+ campaigns from Opus',
+      'Review GA4 analytics for Pinterest → Etsy conversion',
+      'Continue automated posting schedule'
     ],
-    techStack: ['Node.js', 'Pinterest API', 'nano-banana-pro', 'Cron', 'Queue system'],
-    lastWorked: '2026-03-10',
+    techStack: ['Node.js', 'Pinterest API', 'nano-banana-pro', 'Cron', 'Queue system', 'UTM tracking'],
+    lastWorked: '2026-04-05',
     file: '/app/skills/pinterest-campaign-automation/SKILL.md'
   },
   {

@@ -2,22 +2,22 @@
 // This file is dynamically managed by the Command Center
 
 export const priorities = {
-  date: "2026-03-10",
+  date: "2026-04-20",
   briefDelivered: true,
   tasks: [
     {
-      id: "bundle-images-her-working-life",
-      text: "🎨 Create Her Working Life Collection bundle images",
+      id: "fishermans-collection-images",
+      text: "🎨 Complete Fisherman's Collection bundle images",
       owner: "Skippy",
-      priority: "urgent",
+      priority: "high",
       completed: false,
       project: "bundle-listing-images",
-      notes: "1/4 bundles complete (The 1950s Collection done). Her Working Life Collection is NEXT - validated by Beth's $29.97 Etsy order (all 3 books from this collection). 10 images needed: hero shot, spread, 3x interior samples, infographic, colored sample, size reference, gift shot, collection context.",
+      notes: "3/4 bundles complete (1950s ✅, Her Working Life ✅, His Working Life ✅). Only Fisherman's Collection remaining (3 books - fastest one). Then list ALL 4 bundles on Gumroad + Etsy.",
       nextActions: [
-        "Use same 10-slot workflow as 1950s Collection",
-        "Books: Beauty Shop, Sewing/Quilting, Home Cook, plus 3 more from women's working life",
-        "Generate via nano-banana-pro skill",
-        "Deliver to Anth when complete"
+        "Generate 10 images for Fisherman's Collection",
+        "Use same 10-slot workflow as other bundles",
+        "Deliver to Anth",
+        "Anth lists all 4 bundles on Gumroad + Etsy"
       ]
     },
     {
@@ -36,33 +36,33 @@ export const priorities = {
       ]
     },
     {
-      id: "fishing-log-4week-sprint",
-      text: "🎣 Fishing Log App - Start 4-week sprint",
-      owner: "Together",
-      priority: "high",
-      completed: false,
-      project: "fishing-log",
-      notes: "Season starting NOW. Private tournament prep tool (heat maps, catch tracking, pattern analysis). Functional MVP by ~April 10.",
-      nextActions: [
-        "Document detailed feature requirements",
-        "Design database schema (catches, locations, conditions, weather)",
-        "Build core tracking MVP",
-        "Deploy for personal tournament testing"
-      ]
-    },
-    {
-      id: "screen-shields-launch-prep",
-      text: "🛡️ Screen Shields - Finalize for Amazon launch",
+      id: "fishing-log-sprint",
+      text: "🎣 Fishing Log App - Decision needed",
       owner: "Anth",
       priority: "high",
       completed: false,
-      project: "screen-shields",
-      notes: "Testing complete. Fishing/boating season starting - 1-2 week launch window. Needs: marketing materials, logos, packaging.",
+      project: "fishing-log",
+      notes: "Season is ACTIVE. Private tournament prep tool (heat maps, catch tracking). Sprint this now or delay? Prime season timing - decision needed.",
       nextActions: [
-        "Design logos and branding",
+        "Decide: Sprint now or wait?",
+        "If now: Document requirements",
+        "Design database schema",
+        "Build core MVP for tournament use"
+      ]
+    },
+    {
+      id: "screen-shields-launch",
+      text: "🛡️ Screen Shields - LAUNCH NOW (Season Active)",
+      owner: "Anth",
+      priority: "urgent",
+      completed: false,
+      project: "screen-shields",
+      notes: "90% ready. Season is ACTIVE NOW. Needs final push: marketing, logos, packaging, Amazon listings. This is prime launch window.",
+      nextActions: [
+        "Pick next action: Brand name? Logo? Amazon strategy?",
         "Finalize packaging design",
-        "Create Amazon product listings",
-        "Launch on Amazon"
+        "Create Amazon listings",
+        "LAUNCH - don't miss season window"
       ]
     },
     {
@@ -85,33 +85,18 @@ export const priorities = {
       ]
     },
     {
-      id: "etsy-api-follow-up",
-      text: "📧 Follow up with Etsy on API approval",
+      id: "bundle-pdfs-assembly",
+      text: "📦 Assemble Bundle PDFs",
       owner: "Anth",
-      priority: "medium",
-      completed: false,
-      project: "etsy-shop",
-      notes: "API app pending approval 3+ weeks. Tested API key - returned 'not active' error. Need to contact Etsy support or consider reapplying.",
-      nextActions: [
-        "Contact Etsy support for status update",
-        "If rejected, reapply with new app submission",
-        "Manual Etsy management working fine in meantime"
-      ]
-    },
-    {
-      id: "bundle-listing-complete",
-      text: "📦 Complete all 4 bundle image sets",
-      owner: "Skippy",
-      priority: "medium",
+      priority: "high",
       completed: false,
       project: "bundle-listing-images",
-      notes: "After Her Working Life Collection, complete His Working Life and Fisherman's Collection. Then list ALL bundles on Gumroad + Etsy.",
+      notes: "Listing images done for 3/4 bundles. Anth compiling PDF files (32 books total for all bundles). Once complete, upload to Gumroad and list on Etsy.",
       nextActions: [
-        "Complete Her Working Life (next)",
-        "Complete His Working Life",
-        "Complete The Fisherman's Collection",
-        "Anth lists all 4 bundles on Gumroad",
-        "Anth lists all 4 bundles on Etsy"
+        "Anth finishes assembling bundle PDFs",
+        "Upload PDFs to Gumroad",
+        "List all 4 bundles on Gumroad + Etsy",
+        "Drive sales toward $100 threshold"
       ]
     },
     {
@@ -129,17 +114,17 @@ export const priorities = {
       ]
     },
     {
-      id: "pinterest-week4-monitor",
-      text: "📌 Monitor Pinterest Week 4 campaign",
-      owner: "Skippy",
+      id: "pinterest-week8-planning",
+      text: "📌 Pinterest Week 8 Campaign Planning",
+      owner: "Together",
       priority: "low",
       completed: false,
       project: "pinterest-automation",
-      notes: "Week 4 running perfectly (12/40 posted, 0 failures). Auto-pilot through March 15. Just monitor for errors.",
+      notes: "Week 7 complete (March 30 - April 5). Automation running perfectly. Need Week 8+ campaigns from Opus to continue momentum.",
       nextActions: [
-        "Let automation run",
-        "Check for any posting failures (none so far)",
-        "Prepare Week 5 campaign planning"
+        "Request Week 8 campaign from Opus",
+        "Review Week 7 performance (if analytics available)",
+        "Continue automated posting schedule"
       ]
     }
   ],
@@ -148,13 +133,14 @@ export const priorities = {
     summary: "Early spring - fishing season starting"
   },
   reminders: [
-    "🎉 FIRST ETSY SALE! March 9 - $29.97 (validates Her Working Life bundle)",
-    "📊 Sales momentum: 5 books sold this week (2 Amazon + 3 Etsy)",
-    "🎣 Fishing season starting - Screen Shields + Fishing Log both urgent",
-    "📚 Good Times Collection (5 books) under Amazon review - update site when live",
-    "🛍️ Bundles validated - Her Working Life Collection is priority #1",
-    "💌 Email automation blocked until $100 Gumroad sales (bundles will help)",
-    "🍺 Command Center + Website Maintenance now documented as skills"
+    "🎣 FISHING SEASON ACTIVE - Screen Shields + Fishing Log timing is NOW",
+    "📦 Bundle Images: 3/4 Complete - Only Fisherman's Collection remains",
+    "💰 Etsy Sales: $56+ total, 6 orders (First sale March 9 validates model)",
+    "📊 GA4 + UTM Tracking: Fully connected across Etsy/Amazon/Gumroad",
+    "📌 Pinterest Week 7: Complete (40/40 posted, 0 failures)",
+    "📚 Good Times Collection: Still under Amazon review (5 books pending)",
+    "💌 Email automation: Needs $100 Gumroad sales (bundles will push this over)",
+    "⏱️ Time Tracker: Needs debugging THIS WEEK for personal testing"
   ]
 }
 
