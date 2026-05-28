@@ -2,7 +2,7 @@
 // This file is dynamically managed by the Command Center
 
 export const priorities = {
-  date: "2026-04-20",
+  date: "2026-05-28",
   briefDelivered: true,
   tasks: [
     {
@@ -130,17 +130,19 @@ export const priorities = {
   ],
   weather: {
     location: "St. John, NB",
-    summary: "Early spring - fishing season starting"
+    summary: "Late May - fishing season in full swing, cooler & wet today (45°F, drizzle)"
   },
   reminders: [
-    "🎣 FISHING SEASON ACTIVE - Screen Shields + Fishing Log timing is NOW",
+    "🚨 SCREEN SHIELDS URGENT - Season in full swing, launch window closing fast",
+    "🎣 FISHING SEASON ACTIVE - Screen Shields + Fishing Log timing is critical NOW",
     "📦 Bundle Images: 3/4 Complete - Only Fisherman's Collection remains",
     "💰 Etsy Sales: $56+ total, 6 orders (First sale March 9 validates model)",
     "📊 GA4 + UTM Tracking: Fully connected across Etsy/Amazon/Gumroad",
-    "📌 Pinterest Week 7: Complete (40/40 posted, 0 failures)",
+    "📌 Pinterest cron outdated: Checking Week 7 (March 30-Apr 5) instead of current May campaigns",
     "📚 Good Times Collection: Still under Amazon review (5 books pending)",
     "💌 Email automation: Needs $100 Gumroad sales (bundles will push this over)",
-    "⏱️ Time Tracker: Needs debugging THIS WEEK for personal testing"
+    "⏱️ Time Tracker: Needs debugging THIS WEEK for personal testing",
+    "📊 Command Center: Refreshed May 28 after 38-day gap (was April 20)"
   ]
 }
 
