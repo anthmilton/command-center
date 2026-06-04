@@ -2,7 +2,7 @@
 // This file is dynamically managed by the Command Center
 
 export const priorities = {
-  date: "2026-05-28",
+  date: "2026-06-04",
   briefDelivered: true,
   tasks: [
     {
@@ -130,19 +130,19 @@ export const priorities = {
   ],
   weather: {
     location: "St. John, NB",
-    summary: "Late May - fishing season in full swing, cooler & wet today (45°F, drizzle)"
+    summary: "Early June - sunny & pleasant (50-60°F), perfect outdoor conditions, prime season active"
   },
   reminders: [
-    "🚨 SCREEN SHIELDS URGENT - Season in full swing, launch window closing fast",
-    "🎣 FISHING SEASON ACTIVE - Screen Shields + Fishing Log timing is critical NOW",
-    "📦 Bundle Images: 3/4 Complete - Only Fisherman's Collection remains",
-    "💰 Etsy Sales: $56+ total, 6 orders (First sale March 9 validates model)",
+    "🚨 SCREEN SHIELDS CRITICAL - Season in FULL SWING, every day matters for market position",
+    "🎣 PEAK SEASON NOW - Screen Shields + Fishing Log timing window narrowing",
+    "📦 Bundle Images: 3/4 Complete - Only Fisherman's Collection remains (3 books, fastest)",
+    "💰 Etsy Sales: $56+ total, 6 orders (validates bundle strategy)",
     "📊 GA4 + UTM Tracking: Fully connected across Etsy/Amazon/Gumroad",
-    "📌 Pinterest cron outdated: Checking Week 7 (March 30-Apr 5) instead of current May campaigns",
-    "📚 Good Times Collection: Still under Amazon review (5 books pending)",
-    "💌 Email automation: Needs $100 Gumroad sales (bundles will push this over)",
-    "⏱️ Time Tracker: Needs debugging THIS WEEK for personal testing",
-    "📊 Command Center: Refreshed May 28 after 38-day gap (was April 20)"
+    "📌 Pinterest automation: Working perfectly, just running outdated March campaign files",
+    "📚 Good Times Collection: Pending Amazon review (5 books waiting for approval)",
+    "💌 Email automation: Ready to deploy at $100 Gumroad sales (bundles drive this)",
+    "⏱️ Time Tracker: Needs status from Anth to debug this week",
+    "📊 Command Center: Refreshed June 4 (was May 28 - 7 day gap)"
   ]
 }
 
