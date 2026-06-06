@@ -2,7 +2,7 @@
 // This file is dynamically managed by the Command Center
 
 export const priorities = {
-  date: "2026-06-05",
+  date: "2026-06-06",
   briefDelivered: true,
   tasks: [
     {
@@ -130,7 +130,7 @@ export const priorities = {
   ],
   weather: {
     location: "St. John, NB",
-    summary: "Friday June 5 - Sunny & warming (48°F→73°F), perfect outdoor day, prime fishing season"
+    summary: "Saturday June 6 - Sunny morning (49°F), light winds, perfect early summer weekend, prime fishing season"
   },
   reminders: [
     "🚨 SCREEN SHIELDS CRITICAL - Season in FULL SWING, every day matters for market position",
